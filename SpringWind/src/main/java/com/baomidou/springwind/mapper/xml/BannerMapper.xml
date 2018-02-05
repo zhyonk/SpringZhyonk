@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baomidou.springwind.mapper.BannerMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.baomidou.springwind.entity.Banner">
+		<result column="id" property="id" />
+		<result column="src" property="src" />
+		<result column="title" property="title" />
+		<result column="crTime" property="crTime" />
+		<result column="isShow" property="isShow" />
+		<result column="sort" property="sort" />
+		<result column="url" property="url" />
+	</resultMap>
+
+	<select id="selectBannerList" resultType="Banner">
+		select * FROM banner WHERE isShow = 0
+	</select>
+</mapper>

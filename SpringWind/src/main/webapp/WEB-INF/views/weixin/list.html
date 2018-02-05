@@ -1,0 +1,170 @@
+#override("title")
+SpringWind - 微信用户管理
+#end
+#override("css")
+<link href="#springUrl('/static/css/plugins/bootstrap-table/bootstrap-table.min.css')" rel="stylesheet">
+#end
+#override("breadcrumb")
+<li><a>微信管理</a></li>
+<li class="active"><strong>用户管理</strong></li>
+#end
+#override("content")
+<div class="row">
+    <div class="ibox-content text-right form-inline" style="background: #F3F3F4;">
+        <div class="input-group">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+				<button type="button" class="btn btn-info">搜索</button>
+			</span>
+        </div>
+        <button class="btn btn-primary" onclick="updateUser(null)" type="button">
+            <i class="fa fa-pencil"></i>&nbsp;更新用户
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <table id="dataTable"></table>
+    </div>
+</div>
+#end
+#override("js")
+<script src="#springUrl('/static/js/plugins/bootstrap-table/bootstrap-table.min.js')"></script>
+<script src="#springUrl('/static/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js')"></script>
+<script src="#springUrl('/static/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js')"></script>
+<script src="#springUrl('/static/plugins/layer-v2.2/layer/layer.js')"></script>
+<script src="#springUrl('/static/js/base_list.js')"></script>
+<script src="#springUrl('/static/js/common.js')"></script>
+<script type="text/javascript">
+    var dataUrl = "#springUrl('/weixin/user/getUserList.html')";
+    var dataColumns = [
+//        {
+//            field: 'headImgUrl',
+//            title: '头像',
+//            align: 'center',
+//            formatter: function (value, row, index) {
+//                return ('<img  src='+value+' class="img-rounded" style="height: auto" >');
+//            }
+//        }
+        {
+            field: 'operation', title: '头像',
+            formatter: function (value, row, index) {
+                var s = '<a class = "view"  href="javascript:void(0)"><img style="width:30px;height:30px;"  src="' + row.headImgUrl + '" /></a>';
+                return s;
+            },
+            events: 'operateEvents',
+            width: '30'
+        }
+        , {
+            field: 'nickname',
+            title: '用户昵称'
+        }, {
+            field: 'sex',
+            title: '性别'
+        }, {
+            field: 'country',
+            title: '国家'
+        }, {
+            field: 'city',
+            title: '城市'
+        }, {
+            field: 'province',
+            title: '省份'
+        }, {
+            field: 'subscribeTime',
+            title: '加入时间',
+            formatter: function (value, row, index) {
+                return timetrans(row.subscribeTime);
+            }
+        },{
+            title: '状态',
+            width: '40',
+            formatter: function (value, row, index) {
+                var isDel = row.isDel;
+                if (isDel == 0) {
+                    return '<a class="btn btn-xs btn-primary">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp关注 &nbsp&nbsp&nbsp&nbsp&nbsp</a> '
+                } else if(isDel==1) {
+                    return '<a class="btn btn-xs btn-warning">&nbsp&nbsp取消关注&nbsp&nbsp</a> '
+                }else if(isDel==2){
+                    return '<a class="btn btn-xs btn-primary">&nbsp&nbsp重新关注&nbsp&nbsp</a> '
+                }
+
+            }
+        }
+//        ,{
+//            title: '操作',
+//            formatter: function (value, row, index) {
+//                var id = row.id;
+//                return '<a class="btn btn-xs btn-warning" onclick="editUser(' + "'" + id + "'" + ')"><i class="fa fa-pencil"></i>编辑</a> '
+//                <!-- 此处按钮级别权限控制，目前只有 admin 拥有该权限！ -->
+//            #if ($SSOPermission.isActionable("10010"))
+//                    +'<a class="btn btn-xs btn-danger" onclick="delUser(' + "'" + id + "'" + ')"><i class="fa fa-remove"></i>删除</a>'
+//                    #end;
+//            }
+//        }
+    ];
+
+    function timetrans(date){
+        var date = new Date(date*1000);//如果date为13位不需要乘1000
+        var Y = date.getFullYear() + '年';
+        var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '月';
+        var D = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate()) + '日';
+        var h = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':';
+        var m = (date.getMinutes() <10 ? '0' + date.getMinutes() : date.getMinutes()) + ':';
+        var s = (date.getSeconds() <10 ? '0' + date.getSeconds() : date.getSeconds());
+        return Y+M+D+h+m+s;
+    }
+    window.operateEvents = {
+        'click .view': function (e, value, row, index) {
+            layer.open({
+                type: 1,
+                title: false,
+                closeBtn: 0,
+                area: 'auto',
+                skin: 'layui-layer-nobg', //没有背景色
+                shadeClose: true,
+                content: '<img src="' + row.headImgUrl + '"/>'
+            });
+        }
+    };
+
+    function dataQueryParams(params) {
+        return {
+            _size: params.limit,  //页面大小
+            _index: params.offset //页码
+        };
+    }
+
+    function delUser(userId) {
+        //询问框
+        layer.confirm('确定删除吗？', {
+            btn: ['确定', '取消'] //按钮
+        }, function () {
+            $.ajax({
+                type: "POST",
+                url: "#springUrl('/perm/user/delUser/')" + userId,
+                datatype: "text",
+                success: function (data) {
+                    if (data == 'true') {
+                        $('#dataTable').bootstrapTable('refresh', {url: dataUrl});
+                    }
+                    layer.closeAll();
+                }
+            });
+        }, function () {
+            return;
+        });
+    }
+
+    function updateUser(id){
+        $.ajax({
+            type: "POST",
+            url: "#springUrl('/weixin/user/updateList')",
+            datatype: "text",
+            success: function (data) {
+            }
+        });
+    }
+</script>
+#end
+#extends("/common/framework.html")

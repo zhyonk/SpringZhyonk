@@ -42,7 +42,7 @@ public class AutoGeneratorHelper {
 		gc.setEnableCache(false);// XML 二级缓存
 		gc.setBaseResultMap(true);// XML ResultMap
 		gc.setBaseColumnList(false);// XML columList
-		gc.setAuthor("Yanghu");
+		gc.setAuthor("zhyonk");
 		mpg.setGlobalConfig(gc);
 
 		// 数据源配置
@@ -51,8 +51,8 @@ public class AutoGeneratorHelper {
 		dsc.setTypeConvert(new MySqlTypeConvert());
 		dsc.setDriverName("com.mysql.jdbc.Driver");
 		dsc.setUsername("root");
-		dsc.setPassword("521");
-		dsc.setUrl("jdbc:mysql://127.0.0.1:3306/springwind?characterEncoding=utf8");
+		dsc.setPassword("331520");
+		dsc.setUrl("jdbc:mysql://127.0.0.1:3306/ssm?characterEncoding=utf8");
 		mpg.setDataSource(dsc);
 
 		// 策略配置
@@ -66,7 +66,7 @@ public class AutoGeneratorHelper {
 
 		// 包配置
 		PackageConfig pc = new PackageConfig();
-		pc.setModuleName("test");
+//		pc.setModuleName("test");
 		pc.setParent("com.baomidou.springwind");// 自定义包路径
 		pc.setController("controller");// 这里是控制器包名，默认 web
 		mpg.setPackageInfo(pc);

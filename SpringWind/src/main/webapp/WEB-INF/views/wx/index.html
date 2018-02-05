@@ -1,0 +1,228 @@
+#override("title")
+主页
+#end
+#override("content")
+<div class="weui-tab">
+
+    <div class="weui-tab__panel" style="height: 100%">
+        <!--主页的内容-->
+        <div id="tab1">
+            <!--<%&#45;&#45;搜索框的内容&#45;&#45;%>-->
+            <div class="weui-search-bar" id="searchBar" style="height: 5%">
+                <form class="weui-search-bar__form">
+                    <div class="weui-search-bar__box">
+                        <i class="weui-icon-search"></i>
+                        <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索"
+                               required/>
+                        <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                    </div>
+                    <label class="weui-search-bar__label" id="searchText">
+                        <i class="weui-icon-search"></i>
+                        <span>搜索</span>
+                    </label>
+                </form>
+                <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+            </div>
+            <div class="weui-cells searchbar-result" id="searchResult" style="display: none">
+                <div class="weui-cell weui-cell_access">
+                    <div class="weui-cell__bd weui-cell_primary">
+                        <p>实时搜索文本</p>
+                    </div>
+                </div>
+                <div class="weui-cell weui-cell_access">
+                    <div class="weui-cell__bd weui-cell_primary">
+                        <p>实时搜索文本</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="slider">
+                    <!--<div class="swiper-slide">-->
+                        <!--<img src="#springUrl('/static/img/banner/banner1.jpg')">-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">Slide 2</div>-->
+                    <!--<div class="swiper-slide">Slide 3</div>-->
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+
+                <!-- 如果需要导航按钮 -->
+                <!--<div class="swiper-button-prev"></div>-->
+                <!--<div class="swiper-button-next"></div>-->
+
+                <!-- 如果需要滚动条 -->
+                <!--<div class="swiper-scrollbar"></div>-->
+            </div>
+
+            <!--<%&#45;&#45;panel的内容&#45;&#45;%>-->
+            <div class="weui-panel weui-panel_access">
+
+
+                <div class="weui-panel__bd" id="panel">
+
+                </div>
+
+
+                <div class="weui-panel__ft">
+                    <a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link">
+                        <div class="weui-cell__bd">查看更多</div>
+                        <span class="weui-cell__ft"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="tab2" style="display:none">
+
+            <div class="weui-grids">
+                <!-- 第一个宫格 -->
+                <a href="#" class="weui-grid">
+                    <!-- 图标 -->
+                    <div class="weui-grid__icon">
+                        <img src="" alt="">
+                    </div>
+                    <!-- 标签文字 -->
+                    <p class="weui-grid__label">标签文字</p>
+                </a>
+                <!-- 第二个宫格 -->
+                <a href="#" class="weui-grid">
+                    <!-- 图标 -->
+                    <div class="weui-grid__icon">
+                        <img src="" alt="">
+                    </div>
+                    <!-- 标签文字 -->
+                    <p class="weui-grid__label">标签文字</p>
+                </a>
+            </div>
+
+        </div>
+        <!--个人中心-->
+        <div id="tab3" style="display:none">
+            <div class="my-info">
+                <div class="my-info-background" style="background-color:#fa4949; -webkit-filter:blur(0px)"></div>
+                <img class="my-avatar">
+                <span class="name"></span>
+                <span class="my-vip" style="background:none">普通会员&nbsp;|&nbsp;积分:590&nbsp;|&nbsp;级别:初级</span>
+            </div>
+
+            <div class="weui-cells__title">带图标、说明、跳转的列表项</div>
+            <div class="weui-cells">
+
+                <a class="weui-cell weui-cell_access" href="javascript:;">
+                    <div class="weui-cell__hd"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII="
+                            alt="" style="width:20px;margin-right:5px;display:block"></div>
+                    <div class="weui-cell__bd">
+                        <p>cell standard</p>
+                    </div>
+                    <div class="weui-cell__ft">说明文字</div>
+                </a>
+                <a class="weui-cell weui-cell_access" href="javascript:;">
+                    <div class="weui-cell__hd"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII="
+                            alt="" style="width:20px;margin-right:5px;display:block"></div>
+                    <div class="weui-cell__bd">
+                        <p>cell standard</p>
+                    </div>
+                    <div class="weui-cell__ft">说明文字</div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="weui-tabbar">
+
+        <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on" data="#tab1">
+                    <span style="display: inline-block;position: relative;">
+                        <img src="#springUrl('/static/img/wechat/icon_nav_button.png')" alt=""
+                             class="weui-tabbar__icon">
+                        <span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>
+                    </span>
+            <p class="weui-tabbar__label">主页</p>
+        </a>
+        <a href="javascript:;" class="weui-tabbar__item" data="#tab2">
+            <img src="#springUrl('/static/img/wechat/icon_tabbar.png')" alt="" class="weui-tabbar__icon">
+            <p class="weui-tabbar__label">游戏</p>
+        </a>
+        <a href="javascript:;" class="weui-tabbar__item" data="#tab3">
+            <img src="#springUrl('/static/img/wechat/icon_tabbar.png')" alt="" class="weui-tabbar__icon">
+            <p class="weui-tabbar__label">我</p>
+        </a>
+
+
+    </div>
+</div>
+
+
+#end
+#extends("/common/wechatframework.html")
+<script>
+    $(function () {
+        //1.初始化Table
+        $.ajax({
+            url: "#springUrl('/wx/selectUserInfo/')",
+            type: "post",
+            success: function (data) {
+                var obj = eval('(' + data + ')');
+                $(".my-avatar").attr('src', obj.headImgUrl);
+                $(".name").html(obj.nickname);
+            }
+        });
+
+        $.ajax({
+            url: "#springUrl('/banner/selectBannerList')",
+            type: "post",
+            success: function (data) {
+                var obj = eval('(' + data + ')');
+                text = "";
+                for (var i = 0; i < obj.length; i++) {
+                    text = text + "<div class=\"swiper-slide\">\n" +
+                        "                        <img src=\"#springUrl('"+obj[i].src+"')\">\n" +
+                        "                    </div>"
+                }
+                $("#slider").prepend(text)
+            }
+        });
+
+
+        var mySwiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            }
+        });
+
+
+        $(function () {
+            //1.初始化Table
+            $.ajax({
+                url: "#springUrl('/game/selectGameList')",
+                type: "post",
+                success: function (data) {
+                    var obj = eval('(' + data + ')');
+                    text = "";
+                    for (var i = 0; i < obj.length; i++) {
+                        text = text + "                <div class=\"weui-panel__bd\">\n" +
+                            "                    <a href=\"" + obj[i].url + "\" class=\"weui-media-box weui-media-box_appmsg\">\n" +
+                            "                        <div class=\"weui-media-box__hd\">\n" +
+                            "                            <img class=\"weui-media-box__thumb\"\n" +
+                            "                                 src=\"#springUrl('" + obj[i].image + ')"\"\n" +
+                        "                                 alt=\"\">\n" +
+                        "                        </div>\n" +
+                        "                        <div class=\"weui-media-box__bd\" href=\"" + obj[i].url + "\">\n" +
+                        "                            <h4 class=\"weui-media-box__title\">" + obj[i].title + "</h4>\n" +
+                        "                            <p class=\"weui-media-box__desc\">" + obj[i].description + "</p>\n" +
+                        "                        </div>\n" +
+                        "                    </a>";
+                    }
+                    $("#panel").prepend(text)
+                }
+            });
+        })
+    })
+
+</script>
