@@ -16,4 +16,6 @@ import java.util.List;
 public interface GameMapper extends BaseMapper<Game> {
 
     List<Game> selectGameList();
+
+    Game selectJishiById(String jishiid);
 }

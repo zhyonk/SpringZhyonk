@@ -10,7 +10,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author zhyonk
- * @since 2018-02-04
+ * @since 2018-03-26
  */
 public class Game extends Model<Game> {
 
@@ -25,6 +25,8 @@ public class Game extends Model<Game> {
 	private String type;
 	private Integer status;
 	private Long playcount;
+	private String jishiid;
+	private String tel;
 
 
 	public Integer getId() {
@@ -97,6 +99,22 @@ public class Game extends Model<Game> {
 
 	public void setPlaycount(Long playcount) {
 		this.playcount = playcount;
+	}
+
+	public String getJishiid() {
+		return jishiid;
+	}
+
+	public void setJishiid(String jishiid) {
+		this.jishiid = jishiid;
+	}
+
+	public String getTel() {
+		return tel;
+	}
+
+	public void setTel(String tel) {
+		this.tel = tel;
 	}
 
 	@Override

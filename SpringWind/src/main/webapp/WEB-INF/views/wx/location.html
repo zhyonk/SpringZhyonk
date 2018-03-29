@@ -1,0 +1,120 @@
+#override("title")
+主页
+#end
+#override("content")
+<link rel="stylesheet" href="#springUrl('/static/css/ydui.css?rev=@@hash')"/>
+<div id="container" style="height: 90%"></div>
+
+<div class="weui-tab" style="height: 50px">
+    <div class="weui-tab__panel">
+        <div>
+            <div class="m-cell">
+                <div class="cell-item">
+                    <div class="cell-left" id="currLocation">左边内容一</div>
+                    <div class="cell-right cell-arrow" style="width: 30%">
+                        <a href="javascript:;" class="btn btn-primary">确认</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="weui-tabbar">
+
+    </div>
+</div>
+#end
+#extends("/common/locationframework.html")
+<script type="text/javascript">
+    //    var map = new BMap.Map("container");
+    //    // 创建地图实例
+    //    var point = new BMap.Point(116.404, 39.915);
+    //    // 创建点坐标
+    //    map.centerAndZoom(point, 15);
+    //    // 初始化地图，设置中心点坐标和地图级别
+
+    var map = new BMap.Map("container");
+    var point = new BMap.Point(108.906812, 34.29772);
+    map.centerAndZoom(point, 13);
+
+    //添加门店位置
+    function addMarker(point1, index) {  // 创建图标对象
+        var myIcon = new BMap.Icon("http://zhyonk.tunnel.echomod.cn/static/img/wechat/dianpu16.png", new BMap.Size(48, 48), {
+            // 指定定位位置。
+            // 当标注显示在地图上时，其所指向的地理位置距离图标左上
+            // 角各偏移10像素和25像素。您可以看到在本例中该位置即是
+            // 图标中央下端的尖角位置。
+//            anchor: new BMap.Size(10, 25),
+            // 设置图片偏移。
+            // 当您需要从一幅较大的图片中截取某部分作为标注图标时，您
+            // 需要指定大图的偏移位置，此做法与css sprites技术类似。
+//            imageOffset: new BMap.Size(0, 0 - index * 25)   // 设置图片偏移
+        });
+        // 创建标注对象并添加到地图
+        var marker = new BMap.Marker(point1, {icon: myIcon});
+        marker.addEventListener("click", function () {
+            var opts = {
+                width: 50,     // 信息窗口宽度
+                height: 50,     // 信息窗口高度
+                title: "店铺地址"  // 信息窗口标题
+            }
+            var infoWindow = new BMap.InfoWindow("君悦华府1号楼e单元3h", opts);  // 创建信息窗口对象
+            map.openInfoWindow(infoWindow, map.getCenter());
+        });
+    }
+
+    addMarker(point);
+
+
+    circle = new BMap.Circle(point, 3000, {
+//        strokeColor: "blue",
+        strokeWeight: 1,
+        fillColor: "#E2E8F1",
+        fillOpacity: 0.6
+    })
+    map.addOverlay(circle);
+
+    var geolocation = new BMap.Geolocation();
+    geolocation.getCurrentPosition(function (r) {
+        if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+            var mk = new BMap.Marker(r.point);
+            mk.enableDragging();
+            map.addOverlay(mk);
+            map.panTo(r.point);
+            var gc = new BMap.Geocoder();
+
+
+            map.addEventListener("dragstart", function (e) {
+                alert("开始拖拽")
+
+            });
+
+            mk.addEventListener("dragend", function (e) {
+                map.addOverlay(mk);
+                map.addEventListener('ondragging', function () {
+                    mk.setPosition(map.getCenter());
+                    gc.getLocation(e.point, function (rs) {
+                        $('#currLocation').text(rs.address);
+                    });
+
+                });
+
+            })
+        }
+        else {
+            alert('failed' + this.getStatus());
+        }
+    });
+
+    function getLocationStr(point, gc) {
+        gc.getLocation(point, function (rs) {
+            var addComp = rs.addressComponents;
+            streetNumber = rs.addressComponents.streetNumber;
+            street = rs.addressComponents.street;
+            district = rs.addressComponents.district;
+            city = rs.addressComponents.city;
+            province = rs.addressComponents.province;
+            str = province + city + district + street + streetNumber;
+        });
+    }
+
+</script>

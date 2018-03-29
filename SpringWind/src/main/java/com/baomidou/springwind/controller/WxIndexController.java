@@ -54,8 +54,8 @@ public class WxIndexController extends SuperController {
         WxMenuButton button1 = new WxMenuButton();
         WxMenuButton button2 = new WxMenuButton();
         WxMenuButton button3 = new WxMenuButton();
-        button1.setName("微信主页");
-        button2.setName("后台主页");
+        button1.setName("美甲预约");
+//        button2.setName("拼团美甲");
         button3.setName("生成二维码");
         button1.setType(WxConsts.MenuButtonType.VIEW);
         button2.setType(WxConsts.MenuButtonType.VIEW);
@@ -66,7 +66,7 @@ public class WxIndexController extends SuperController {
         button3.setKey("二维码正在生成");
         menulist.add(button1);
         menulist.add(button2);
-        menulist.add(button3);
+//        menulist.add(button3);
         menu.setButtons(menulist);
         try {
             String s = wxUserService.getMenuService().menuCreate(menu);
@@ -104,13 +104,14 @@ public class WxIndexController extends SuperController {
         }
         return "/zhyonk";
     }
+
     @ResponseBody
     @RequestMapping("/selectUserInfo")
-    public String selectUserInfo(HttpServletResponse response,HttpServletRequest request) {
+    public String selectUserInfo(HttpServletResponse response, HttpServletRequest request) {
         Cookie[] cookies = request.getCookies();
         System.out.println(cookies);
-        for (Cookie cookie : cookies){
-            if (StringUtils.equals(cookie.getName(),"openid")){
+        for (Cookie cookie : cookies) {
+            if (StringUtils.equals(cookie.getName(), "openid")) {
                 System.out.println(cookie.getValue());
                 WechatUser wechatUser = localUserService.selectUserInfoByOpenid(cookie.getValue());
                 return toJson(wechatUser);
@@ -120,12 +121,12 @@ public class WxIndexController extends SuperController {
     }
 
 
-
     @RequestMapping("/index")
     public String index(Model model, HttpServletResponse response, @RequestParam(value = "openid", required = false) String openid) throws WxErrorException {
         System.out.println("index");
-        Cookie cookie = new Cookie("openid",openid);
-        cookie.setMaxAge(2*60*60);
+        Cookie cookie = new Cookie("openid", openid);
+        cookie.setPath("/");
+        cookie.setMaxAge(2 * 60 * 60);
         response.addCookie(cookie);
         return "/wx/index";
     }

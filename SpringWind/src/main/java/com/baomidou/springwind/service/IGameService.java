@@ -16,4 +16,8 @@ import java.util.List;
 public interface IGameService extends IService<Game> {
 
     List<Game> selectGameList();
+    /**
+     * 根据技师id获取技师信息
+     * */
+    Game selectJishiById(String jishiid);
 }

@@ -49,8 +49,9 @@ public class WxMenuController implements WxMpMenuService {
         WxMenu menu = new WxMenu();
         WxMenuButton button1 = new WxMenuButton();
         button1.setType(MenuButtonType.CLICK);
-        button1.setName("今日歌曲");
+        button1.setName("美甲预约");
         button1.setKey("V1001_TODAY_MUSIC");
+        button1.setUrl("");
 
 //        WxMenuButton button2 = new WxMenuButton();
 //        button2.setType(WxConsts.BUTTON_MINIPROGRAM);

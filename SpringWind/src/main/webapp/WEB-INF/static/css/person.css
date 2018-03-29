@@ -20,6 +20,33 @@
     color: #fff;
 }
 
+.my-info .jieshao {
+    top: 8%;
+    font-size: small;
+    position: absolute;
+    left: 57%;
+    width: 200px;
+    height: 20px;
+    margin: 40px 0 0 -100px;
+    text-align: center;
+    color: #fff;
+}
+
+.my-info .weui-badge {
+    /*margin-left: 5px;*/
+    position: absolute;
+    top: 15%;
+    left: 60%;
+    width: 40px;
+    height: 20px;
+    margin: 40px 0 0 -100px;
+    text-align: center;
+    color: #b77777;
+    line-height: 1.6;
+    background-color: #ffffff
+}
+
+
 .my-info .my-vip {
     position: absolute;
     top: 15%;
@@ -38,6 +65,7 @@
 
 .my-info-background {
     width: 100%;
+    background-color: #ffffff;
     min-height: 200px;
     overflow: hidden;
     background-position: center;

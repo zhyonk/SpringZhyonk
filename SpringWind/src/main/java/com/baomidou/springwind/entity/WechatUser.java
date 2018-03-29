@@ -6,10 +6,6 @@ import com.baomidou.mybatisplus.annotations.TableName;
 import me.chanjar.weixin.mp.bean.result.WxMpUser;
 import org.apache.commons.lang.StringUtils;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-
 @TableName(value = "local_user")
 public class WechatUser{
 
@@ -21,7 +17,7 @@ public class WechatUser{
     private java.lang.String openId;
     private java.lang.Boolean subscribe;
     private java.lang.String nickname;
-    private java.lang.String sex;
+    private Integer sex;
     private java.lang.String language;
     private java.lang.String city;
     private java.lang.String province;
@@ -77,11 +73,11 @@ public class WechatUser{
         this.nickname = nickname;
     }
 
-    public String getSex() {
+    public Integer getSex() {
         return sex;
     }
 
-    public void setSex(String sex) {
+    public void setSex(Integer sex) {
         this.sex = sex;
     }
 
@@ -176,7 +172,6 @@ public class WechatUser{
         this.province = user.getProvince();
         this.remark = user.getRemark();
         this.sex = user.getSex();
-        this.sexId = user.getSexId();
         this.subscribe = user.getSubscribe();
         this.unionId = user.getUnionId();
         this.subscribeTime = user.getSubscribeTime();

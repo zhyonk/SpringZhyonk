@@ -24,4 +24,10 @@ public class GameServiceImpl extends BaseServiceImpl<GameMapper, Game> implement
         List<Game> list = baseMapper.selectGameList();
         return list;
     }
+
+    @Override
+    public Game selectJishiById(String jishiid) {
+        Game game = baseMapper.selectJishiById(jishiid);
+        return game;
+    }
 }

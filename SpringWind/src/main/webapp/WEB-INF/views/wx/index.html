@@ -37,16 +37,16 @@
             </div>
 
 
-            <div class="swiper-container">
-                <div class="swiper-wrapper" id="slider">
+            <div class="swiper-container banner">
+                <div class="swiper-wrapper banner-wrapper" id="slider">
                     <!--<div class="swiper-slide">-->
-                        <!--<img src="#springUrl('/static/img/banner/banner1.jpg')">-->
+                    <!--<img src="#springUrl('/static/img/banner/banner1.jpg')">-->
                     <!--</div>-->
                     <!--<div class="swiper-slide">Slide 2</div>-->
                     <!--<div class="swiper-slide">Slide 3</div>-->
                 </div>
                 <!-- 如果需要分页器 -->
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination banner-pagination"></div>
 
                 <!-- 如果需要导航按钮 -->
                 <!--<div class="swiper-button-prev"></div>-->
@@ -54,6 +54,59 @@
 
                 <!-- 如果需要滚动条 -->
                 <!--<div class="swiper-scrollbar"></div>-->
+            </div>
+
+            <!--服务类型选择-->
+
+            <div class="weui-grids" style="background-color: #ffffff">
+                <a href="javascript:;" class="weui-grid">
+                    <div class="weui-grid__icon">
+                        <img src="#springUrl('/static/img/wechat/zhijiayou.png')" alt="">
+                    </div>
+                    <p class="weui-grid__label">
+                        蔻丹
+                    </p>
+                </a>
+                <a href="javascript:;" class="weui-grid">
+                    <div class="weui-grid__icon">
+                        <img src="#springUrl('/static/img/wechat/guangliao1.png')" alt="">
+                    </div>
+                    <p class="weui-grid__label">
+                        光疗
+                    </p>
+                </a>
+                <a href="javascript:;" class="weui-grid">
+                    <div class="weui-grid__icon">
+                        <img src="#springUrl('/static/img/wechat/caihui1.png')" alt="">
+                    </div>
+                    <p class="weui-grid__label">
+                        彩绘
+                    </p>
+                </a>
+                <a href="javascript:;" class="weui-grid">
+                    <div class="weui-grid__icon">
+                        <img src="#springUrl('/static/img/wechat/yanchang.png')" alt="">
+                    </div>
+                    <p class="weui-grid__label">
+                        延长
+                    </p>
+                </a>
+                <a href="javascript:;" class="weui-grid">
+                    <div class="weui-grid__icon">
+                        <img src="#springUrl('/static/img/wechat/meijie.png')" alt="">
+                    </div>
+                    <p class="weui-grid__label">
+                        美睫
+                    </p>
+                </a>
+                <a href="javascript:;" class="weui-grid">
+                    <div class="weui-grid__icon">
+                        <img src="#springUrl('/static/img/wechat/banyongjiu.png')" alt="">
+                    </div>
+                    <p class="weui-grid__label">
+                        半永久
+                    </p>
+                </a>
             </div>
 
             <!--<%&#45;&#45;panel的内容&#45;&#45;%>-->
@@ -67,162 +120,337 @@
 
                 <div class="weui-panel__ft">
                     <a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link">
-                        <div class="weui-cell__bd">查看更多</div>
+                        <div class="weui-cell__bd">加入我们</div>
                         <span class="weui-cell__ft"></span>
                     </a>
                 </div>
             </div>
-        </div>
-        <div id="tab2" style="display:none">
 
-            <div class="weui-grids">
-                <!-- 第一个宫格 -->
-                <a href="#" class="weui-grid">
-                    <!-- 图标 -->
-                    <div class="weui-grid__icon">
-                        <img src="" alt="">
+            <!--seper 设计师切换-->
+
+            <div id="taobao-best" style="width: 100%">
+                <!-- Swiper -->
+                <div class="swiper-container show-swiper swiper-container-horizontal swiper-container-ios shejishi-container " style="z-index: 3">
+                    <div class="swiper-wrapper shejishi-wrapper" style="transition-duration: 0ms; transform: translate3d(37px, 0px, 0px);">
+                        <div class="swiper-slide swiper-slide-active shejishi-slide" style="margin-right: 17px;">
+                            <div class="goods" style="transform: scale3d(1.1, 1.1, 1); transition-duration: 0ms;width: 158px;height:230px">
+
+                                <a href="#springUrl('/yuyue/yuyue/?jishiid=oWHgww8TS9c6YC5EY9NoYBCzRtfY')">
+                                    <div class="c-top">
+                                        <div class="img">
+                                            <img src="#springUrl('/static/uploads/001.jpg')" width="100%">
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <h2>夏惠敏老师</h2>
+                                        <!--<p>一把可以切水果</p>-->
+                                        <ul><li>美甲</li><li>化妆师</li></ul>
+                                        <div class="btn" >立即预约</div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-next shejishi-slide" style="margin-right: 17px;">
+                            <div class="goods" style="transform: scale3d(1, 1, 1); transition-duration: 0ms;width: 158px;height:230px">
+                                <a href="#springUrl('/game/report/oWHgww6RA28kbYUwlwvhs64sw_9s')">
+                                    <div class="c-top">
+                                        <!--<div class="date">-->
+                                        <!--<div class="year">2017.12</div>-->
+                                        <!--<div class="day">15</div>-->
+                                        <!--<div class="oldyear">丁酉年</div>-->
+                                        <!--<div class="oldday">十月廿八</div>-->
+                                        <!--</div>-->
+                                        <div class="img">
+                                            <img src="#springUrl('/static/uploads/002.jpg')" width="100%">
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <h2>左轶君老师</h2>
+                                        <!--<p>一把可以切水果</p>-->
+                                        <ul><li>美甲</li><li>化妆师</li></ul>
+                                        <div class="btn">立即预约</div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide shejishi-slide" style="margin-right: 17px;">
+                            <div class="goods" style="transform: scale3d(1, 1, 1); transition-duration: 0ms;width: 158px;height:230px">
+                                <a href="#">
+                                    <div class="c-top">
+                                        <!--<div class="date">-->
+                                        <!--<div class="year">2017.12</div>-->
+                                        <!--<div class="day">15</div>-->
+                                        <!--<div class="oldyear">丁酉年</div>-->
+                                        <!--<div class="oldday">十月廿八</div>-->
+                                        <!--</div>-->
+                                        <div class="img">
+                                            <img src="#springUrl('/static/uploads/001.jpg')" width="100%">
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <h2>夏惠敏老师</h2>
+                                        <!--<p>一把可以切水果</p>-->
+                                        <ul><li>美甲</li><li>化妆师</li></ul>
+                                        <div class="btn">立即预约</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide shejishi-slide" style="margin-right: 17px;">
+                            <div class="goods" style="transform: scale3d(1, 1, 1); transition-duration: 0ms;width: 158px;height:230px">
+                                <a href="#">
+                                    <div class="c-top">
+                                        <!--<div class="date">-->
+                                        <!--<div class="year">2017.12</div>-->
+                                        <!--<div class="day">15</div>-->
+                                        <!--<div class="oldyear">丁酉年</div>-->
+                                        <!--<div class="oldday">十月廿八</div>-->
+                                        <!--</div>-->
+                                        <div class="img">
+                                            <img src="#springUrl('/static/uploads/002.jpg')" width="100%">
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <h2>左轶君老师</h2>
+                                        <!--<p>一把可以切水果</p>-->
+                                        <ul><li>美甲</li><li>化妆师</li></ul>
+                                        <div class="btn">立即预约</div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide shejishi-slide" style="margin-right: 17px;">
+                            <div class="goods" style="transform: scale3d(1, 1, 1); transition-duration: 0ms;width: 158px;height:230px">
+                                <a href="#">
+                                    <div class="c-top">
+                                        <!--<div class="date">-->
+                                        <!--<div class="year">2017.12</div>-->
+                                        <!--<div class="day">15</div>-->
+                                        <!--<div class="oldyear">丁酉年</div>-->
+                                        <!--<div class="oldday">十月廿八</div>-->
+                                        <!--</div>-->
+                                        <div class="img">
+                                            <img src="#springUrl('/static/uploads/001.jpg')" width="100%">
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <h2>夏惠敏老师</h2>
+                                        <!--<p>一把可以切水果</p>-->
+                                        <ul><li>美甲</li><li>化妆师</li></ul>
+                                        <div class="btn">立即预约</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide last-slide shejishi-slide" style="margin-right: 17px;">
+                            <span class="icon"></span>
+                            <p class="text">左滑查看更多</p>
+                        </div>
                     </div>
-                    <!-- 标签文字 -->
-                    <p class="weui-grid__label">标签文字</p>
-                </a>
-                <!-- 第二个宫格 -->
-                <a href="#" class="weui-grid">
-                    <!-- 图标 -->
-                    <div class="weui-grid__icon">
-                        <img src="" alt="">
+                </div>
+                <div class="mask" style="z-index: 2"></div>
+                <div class=" shejishi-container swiper-container bg-swiper swiper-container-fade swiper-container-horizontal swiper-container-ios" style="position: absolute;z-index: 1">
+                    <div class="swiper-wrapper" style="transition-duration: 0ms;">
+                        <div class="swiper-slide swiper-slide-active shejishi-slide" style="width: 320px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><img src="#springUrl('/static/uploads/blur001.jpg')"></div>
+                        <div class="swiper-slide swiper-slide-next shejishi-slide" style="width: 320px; opacity: 0; transform: translate3d(-320px, 0px, 0px); transition-duration: 0ms;"><img src="#springUrl('/static/uploads/blur002.jpg')"></div>
+                        <div class="swiper-slide shejishi-slide" style="width: 320px; opacity: 0; transform: translate3d(-640px, 0px, 0px); transition-duration: 0ms;"><img src="#springUrl('/static/uploads/blur003.jpg')"></div>
+                        <div class="swiper-slide shejishi-slide" style="width: 320px; opacity: 0; transform: translate3d(-1280px, 0px, 0px); transition-duration: 0ms;"><img src="#springUrl('/static/uploads/blur004.jpg')"></div>
+                        <div class="swiper-slide shejishi-slide" style="width: 320px; opacity: 0; transform: translate3d(-1920px, 0px, 0px); transition-duration: 0ms;"><img src="#springUrl('/static/uploads/blur005.jpg')"></div>
+
                     </div>
-                    <!-- 标签文字 -->
-                    <p class="weui-grid__label">标签文字</p>
-                </a>
+                </div>
             </div>
 
-        </div>
-        <!--个人中心-->
-        <div id="tab3" style="display:none">
-            <div class="my-info">
-                <div class="my-info-background" style="background-color:#fa4949; -webkit-filter:blur(0px)"></div>
-                <img class="my-avatar">
-                <span class="name"></span>
-                <span class="my-vip" style="background:none">普通会员&nbsp;|&nbsp;积分:590&nbsp;|&nbsp;级别:初级</span>
+            <!--<div></div>-->
+            <!--<div class="bottom"></div>-->
+
+            <!--<div id="cli_dialog_div"></div>-->
+                <!--设计师切换↑-->
+
+
             </div>
+            <div id="tab2" style="display:none">
 
-            <div class="weui-cells__title">带图标、说明、跳转的列表项</div>
-            <div class="weui-cells">
+                <div class="weui-grids">
+                    <!-- 第一个宫格 -->
+                    <a href="#" class="weui-grid">
+                        <!-- 图标 -->
+                        <div class="weui-grid__icon">
+                            <img src="" alt="">
+                        </div>
+                        <!-- 标签文字 -->
+                        <p class="weui-grid__label">标签文字</p>
+                    </a>
+                    <!-- 第二个宫格 -->
+                    <a href="#" class="weui-grid">
+                        <!-- 图标 -->
+                        <div class="weui-grid__icon">
+                            <img src="" alt="">
+                        </div>
+                        <!-- 标签文字 -->
+                        <p class="weui-grid__label">标签文字</p>
+                    </a>
+                </div>
 
-                <a class="weui-cell weui-cell_access" href="javascript:;">
-                    <div class="weui-cell__hd"><img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII="
-                            alt="" style="width:20px;margin-right:5px;display:block"></div>
-                    <div class="weui-cell__bd">
-                        <p>cell standard</p>
-                    </div>
-                    <div class="weui-cell__ft">说明文字</div>
-                </a>
-                <a class="weui-cell weui-cell_access" href="javascript:;">
-                    <div class="weui-cell__hd"><img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII="
-                            alt="" style="width:20px;margin-right:5px;display:block"></div>
-                    <div class="weui-cell__bd">
-                        <p>cell standard</p>
-                    </div>
-                    <div class="weui-cell__ft">说明文字</div>
-                </a>
             </div>
+            <!--个人中心-->
+            <div id="tab3" style="display:none">
+                <div class="my-info">
+                    <div class="my-info-background" style="background-color:#fab8ce; -webkit-filter:blur(0px)"></div>
+                    <img class="my-avatar">
+                    <span class="name"></span>
+                    <span class="my-vip" style="background:none">普通会员&nbsp;|&nbsp;积分:590&nbsp;|&nbsp;级别:初级</span>
+                </div>
 
+                <div class="weui-cells__title">个人中心</div>
+                <div class="weui-cells">
+
+                    <a class="weui-cell weui-cell_access" href="#springUrl('/yuyue/already')" id="already">
+                        <div class="weui-cell__hd"><img
+                                src="#springUrl('/static/img/wechat/hudie.png')"
+                                alt="" style="width:20px;margin-right:5px;display:block"></div>
+                        <div class="weui-cell__bd">
+                            <p>已预约</p>
+                        </div>
+                        <div class="weui-cell__ft">已经预约了的技师</div>
+                    </a>
+                    <a class="weui-cell weui-cell_access" href="javascript:;">
+                        <div class="weui-cell__hd"><img
+                                src="#springUrl('/static/img/wechat/kouhong.png')"
+                                alt="" style="width:20px;margin-right:5px;display:block"></div>
+                        <div class="weui-cell__bd">
+                            <p>关于我们</p>
+                        </div>
+                        <div class="weui-cell__ft">初夏美甲工作室</div>
+                    </a>
+                </div>
+                <div class="weui-cells__title">积分</div>
+                <div class="weui-cells">
+
+                    <a class="weui-cell weui-cell_access" href="javascript:;">
+                        <div class="weui-cell__hd"><img
+                                src="#springUrl('/static/img/wechat/jifeng.png')"
+                                alt="" style="width:20px;margin-right:5px;display:block"></div>
+                        <div class="weui-cell__bd">
+                            <p>我的积分</p>
+                        </div>
+                        <div class="weui-cell__ft">消费时100积分抵1元</div>
+                    </a>
+                    <a class="weui-cell weui-cell_access" href="javascript:;">
+                        <div class="weui-cell__hd"><img
+                                src="#springUrl('/static/img/wechat/jilu.png')"
+                                alt="" style="width:20px;margin-right:5px;display:block"></div>
+                        <div class="weui-cell__bd">
+                            <p>积分详情</p>
+                        </div>
+                        <div class="weui-cell__ft">详情</div>
+                    </a>
+                </div>
+
+                <div class="weui-cells__title">推荐赚积分</div>
+                <div class="weui-cells">
+
+                    <a class="weui-cell weui-cell_access" href="javascript:;" id="erweima">
+                        <div class="weui-cell__hd"><img
+                                src="#springUrl('/static/img/wechat/erweima.png')"
+                                alt="" style="width:20px;margin-right:5px;display:block"></div>
+                        <div class="weui-cell__bd">
+                            <p>我的推荐二维码</p>
+                        </div>
+                        <div class="weui-cell__ft">推荐成功赚100积分</div>
+                    </a>
+                    <a class="weui-cell weui-cell_access" href="javascript:;">
+                        <div class="weui-cell__hd"><img
+                                src="#springUrl('/static/img/wechat/jilu.png')"
+                                alt="" style="width:20px;margin-right:5px;display:block"></div>
+                        <div class="weui-cell__bd">
+                            <p>推荐成功记录</p>
+                        </div>
+                        <div class="weui-cell__ft">详情</div>
+                    </a>
+                </div>
+                <div class="weui-cells__title"></div>
+
+
+                <div class="weui-cells">
+
+                </div>
+
+
+            </div>
         </div>
-    </div>
 
 
-    <div class="weui-tabbar">
+        <div class="weui-tabbar">
 
-        <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on" data="#tab1">
+            <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on" data="#tab1">
                     <span style="display: inline-block;position: relative;">
-                        <img src="#springUrl('/static/img/wechat/icon_nav_button.png')" alt=""
+                        <img src="#springUrl('/static/img/wechat/yuyue.png')" alt=""
                              class="weui-tabbar__icon">
                         <span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>
                     </span>
-            <p class="weui-tabbar__label">主页</p>
-        </a>
-        <a href="javascript:;" class="weui-tabbar__item" data="#tab2">
-            <img src="#springUrl('/static/img/wechat/icon_tabbar.png')" alt="" class="weui-tabbar__icon">
-            <p class="weui-tabbar__label">游戏</p>
-        </a>
-        <a href="javascript:;" class="weui-tabbar__item" data="#tab3">
-            <img src="#springUrl('/static/img/wechat/icon_tabbar.png')" alt="" class="weui-tabbar__icon">
-            <p class="weui-tabbar__label">我</p>
-        </a>
+                <p class="weui-tabbar__label">预约美甲</p>
+            </a>
+            <!--<a href="javascript:;" class="weui-tabbar__item" data="#tab2">-->
+            <!--<img src="#springUrl('/static/img/wechat/meijia.png')" alt="" class="weui-tabbar__icon">-->
+            <!--<p class="weui-tabbar__label">美甲拼团</p>-->
+            <!--</a>-->
+            <a href="javascript:;" class="weui-tabbar__item" data="#tab3">
+            <span style="display: inline-block;position: relative;">
+            <img src="#springUrl('/static/img/wechat/wo.png')" alt="" class="weui-tabbar__icon">
+                <span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>
+                    </span>
+                <p class="weui-tabbar__label">我的预约</p>
+            </a>
 
 
+        </div>
     </div>
-</div>
 
 
-#end
-#extends("/common/wechatframework.html")
-<script>
-    $(function () {
-        //1.初始化Table
-        $.ajax({
-            url: "#springUrl('/wx/selectUserInfo/')",
-            type: "post",
-            success: function (data) {
-                var obj = eval('(' + data + ')');
-                $(".my-avatar").attr('src', obj.headImgUrl);
-                $(".name").html(obj.nickname);
-            }
-        });
+    #end
+    #extends("/common/wechatframework.html")
 
-        $.ajax({
-            url: "#springUrl('/banner/selectBannerList')",
-            type: "post",
-            success: function (data) {
-                var obj = eval('(' + data + ')');
-                text = "";
-                for (var i = 0; i < obj.length; i++) {
-                    text = text + "<div class=\"swiper-slide\">\n" +
-                        "                        <img src=\"#springUrl('"+obj[i].src+"')\">\n" +
-                        "                    </div>"
-                }
-                $("#slider").prepend(text)
-            }
-        });
-
-
-        var mySwiper = new Swiper('.swiper-container', {
-            spaceBetween: 30,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true
-            }
-        });
-
-
+    <script>
         $(function () {
             //1.初始化Table
             $.ajax({
-                url: "#springUrl('/game/selectGameList')",
+                url: "#springUrl('/wx/selectUserInfo/')",
+                type: "post",
+                success: function (data) {
+                    var obj = eval('(' + data + ')');
+                    $(".my-avatar").attr('src', obj.headImgUrl);
+                    $(".name").html(obj.nickname);
+                }
+            });
+
+            $.ajax({
+                url: "#springUrl('/banner/selectBannerList')",
                 type: "post",
                 success: function (data) {
                     var obj = eval('(' + data + ')');
                     text = "";
                     for (var i = 0; i < obj.length; i++) {
-                        text = text + "                <div class=\"weui-panel__bd\">\n" +
-                            "                    <a href=\"" + obj[i].url + "\" class=\"weui-media-box weui-media-box_appmsg\">\n" +
-                            "                        <div class=\"weui-media-box__hd\">\n" +
-                            "                            <img class=\"weui-media-box__thumb\"\n" +
-                            "                                 src=\"#springUrl('" + obj[i].image + ')"\"\n" +
-                        "                                 alt=\"\">\n" +
-                        "                        </div>\n" +
-                        "                        <div class=\"weui-media-box__bd\" href=\"" + obj[i].url + "\">\n" +
-                        "                            <h4 class=\"weui-media-box__title\">" + obj[i].title + "</h4>\n" +
-                        "                            <p class=\"weui-media-box__desc\">" + obj[i].description + "</p>\n" +
-                        "                        </div>\n" +
-                        "                    </a>";
+                        text = text + "<div class=\"swiper-slide banner\">\n" +
+                            "                        <img src=\"#springUrl('" + obj[i].src + "')\" alt=\"\">\n" +
+                            "                </div>"
                     }
-                    $("#panel").prepend(text)
+                    $("#slider").prepend(text)
+                    var mySwiper = new Swiper('.banner', {
+                        spaceBetween: 30,
+                        pagination: {
+                            el: '.banner-pagination',
+                            clickable: true
+                        },
+//                    slidesPerView: obj.length
+
+                    });
                 }
             });
-        })
-    })
 
-</script>
+        })
+
+    </script>

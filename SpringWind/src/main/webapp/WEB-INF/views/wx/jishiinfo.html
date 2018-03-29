@@ -1,0 +1,187 @@
+#override("title")
+主页
+#end
+#override("content")
+<style>
+
+    body {
+        background-color: #ffffff;
+
+    }
+</style>
+
+<link rel="stylesheet" href="#springUrl('/static/css/ydui.css?rev=@@hash')"/>
+<!--<div class="glass">-->
+<!--</div>-->
+
+<div class="weui-tab">
+
+    <div class="weui-tab__panel" style="height: 100%">
+        <!--主页的内容-->
+        <div id="tab1">
+
+            <div class="my-info" style="background: #FFFFFF">
+                <div class="my-info-background"
+                     style="background-color:#fab8ce; -webkit-filter:blur(0px);border-bottom-right-radius: 40px;    border-bottom-left-radius: 40px;"></div>
+                <img class="my-avatar" style="left: 17%;top: 19%">
+                <div class="name" style="top: 3%;font-size: large;"></div>
+                <div class="jieshao" style=""></div>
+                <span class="weui-badge" style="">专业</span>
+                <span class="weui-badge"
+                      style="width: 60px; left: 72%; background-color: rgb(249, 116, 232); color: #ffffff;">经验丰富</span>
+                <span class="weui-badge"
+                      style="left: 90%; width: 60px; background: #4bf3b5; color: #ffffff;">服务到位</span>
+            </div>
+        </div>
+
+        <div class="m-tab" data-ydui-tab><!-- 这里添加data-ydui-tab就可以啦 -->
+            <ul class="tab-nav">
+                <li class="tab-nav-item tab-active"><a href="javascript:;">作品</a></li>
+                <li class="tab-nav-item"><a href="javascript:;">评价</a></li>
+                <li class="tab-nav-item"><a href="javascript:;">介绍</a></li>
+            </ul>
+            <div class="tab-panel">
+                <div class="tab-panel-item tab-active">
+                    <img src="#springUrl('/static/img/xia/x1.jpg')" style="max-width:100%;overflow:hidden;">
+                    <img src="#springUrl('/static/img/xia/x2.jpg')" style="max-width:100%;overflow:hidden;">
+                    <img src="#springUrl('/static/img/xia/x3.jpg')" style="max-width:100%;overflow:hidden;">
+                    <img src="#springUrl('/static/img/xia/x4.jpg')" style="max-width:100%;overflow:hidden;">
+                    <img src="#springUrl('/static/img/xia/x5.jpg')" style="max-width:100%;overflow:hidden;">
+                    <img src="#springUrl('/static/img/xia/x6.jpg')" style="max-width:100%;overflow:hidden;">
+                </div>
+                <div class="tab-panel-item">222222</div>
+                <div class="tab-panel-item">333333</div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="weui-tabbar">
+
+        <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on" data="#tab1">
+                    <span style="display: inline-block;position: relative;">
+                        <img src="#springUrl('/static/img/wechat/lishi.png')" alt=""
+                             class="weui-tabbar__icon">
+                    </span>
+            <p class="weui-tabbar__label">历史作品</p>
+        </a>
+        <!--<a href="javascript:;" class="weui-tabbar__item" data="#tab2">-->
+        <!--<img src="#springUrl('/static/img/wechat/meijia.png')" alt="" class="weui-tabbar__icon">-->
+        <!--<p class="weui-tabbar__label">美甲拼团</p>-->
+        <!--</a>-->
+        <a href="tel:13152039189" class="weui-tabbar__item" data="#tab3" id="tel">
+            <span style="display: inline-block;position: relative;">
+            <img src="#springUrl('/static/img/wechat/dianhua.png')" alt="" class="weui-tabbar__icon">
+                    </span>
+            <p class="weui-tabbar__label">联系方式</p>
+        </a>
+        <a href="javascript:;" class="weui-btn weui-btn_primary"
+           style="width: 50%;border-radius:0px;border: 0px solid ;" id="showIOSActionSheet">立即预约</a>
+    </div>
+</div>
+
+<div>
+    <div class="weui-mask" id="iosMask" style="display: none"></div>
+    <div class="weui-actionsheet" id="iosActionsheet">
+        <div class="weui-actionsheet__title">
+            <p class="weui-actionsheet__title-text">选择预约方式</p>
+        </div>
+        <div class="weui-actionsheet__menu">
+            <div class="weui-actionsheet__cell" id="shangmeng">
+                <img src="#springUrl('/static/img/wechat/fangzi.png')" alt="" style="width: 16px"
+                >
+                预约上门
+            </div>
+            <div class="weui-actionsheet__cell" id="daodian">
+                <img src="#springUrl('/static/img/wechat/dianpu.png')" alt=""style="width: 16px"
+            >预约到店
+            </div>
+        </div>
+        <div class="weui-actionsheet__action">
+            <div class="weui-actionsheet__cell" id="iosActionsheetCancel">取消</div>
+        </div>
+    </div>
+</div>
+
+
+#end
+#extends("/common/wechatframework.html")
+
+<script type="text/javascript">
+    // ios
+    $(function () {
+        var $iosActionsheet = $('#iosActionsheet');
+        var $iosMask = $('#iosMask');
+
+        function hideActionSheet() {
+            $iosActionsheet.removeClass('weui-actionsheet_toggle');
+            $iosMask.fadeOut(200);
+        }
+
+        $('#shangmeng').on('click',function () {
+            window.location.href="/yuyue/location"
+        })
+
+        $iosMask.on('click', hideActionSheet);
+        $('#iosActionsheetCancel').on('click', hideActionSheet);
+        $("#showIOSActionSheet").on("click", function () {
+            $iosActionsheet.addClass('weui-actionsheet_toggle');
+            $iosMask.fadeIn(200);
+        });
+    });
+</script>
+
+<script>
+    $(function () {
+
+
+        function getQueryVariable() {
+            var query = window.location.href;
+            var vars = query.split("/");
+            a = vars.pop();
+            return a;
+        }
+
+        $.ajax({
+            url: "#springUrl('/game/selectJishiById/?jishiid=" + getQueryVariable() + "')",
+            type: "get",
+            success: function (data) {
+                var obj = eval('(' + data + ')');
+                $(".my-avatar").attr('src', obj.image);
+                $(".name").html(obj.title);
+                $(".jieshao").html(obj.description);
+                $("#tel").attr("href","tel:"+obj.tel);
+            }
+        });
+        $.ajax({
+            url: "#springUrl('/banner/selectBannerList')",
+            type: "post",
+            success: function (data) {
+                var obj = eval('(' + data + ')');
+                text = "";
+                for (var i = 0; i < obj.length; i++) {
+                    text = text + "<div class=\"swiper-slide\">\n" +
+                        "                        <img src=\"#springUrl('" + obj[i].src + "')\" alt=\"\">\n" +
+                        "                </div>"
+                }
+                $("#slider").prepend(text)
+                var mySwiper = new Swiper('.swiper-container', {
+                    spaceBetween: 30,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true
+                    },
+//                    slidesPerView: obj.length
+
+                });
+            }
+        });
+
+
+    })
+
+</script>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baomidou.springwind.mapper.ChanpinMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.baomidou.springwind.entity.Chanpin">
+		<id column="id" property="id" />
+		<result column="name" property="name" />
+		<result column="price1" property="price1" />
+		<result column="price2" property="price2" />
+		<result column="price3" property="price3" />
+		<result column="image" property="image" />
+		<result column="point" property="point" />
+	</resultMap>
+
+</mapper>
