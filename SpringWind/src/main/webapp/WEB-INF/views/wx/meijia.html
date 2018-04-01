@@ -1,0 +1,893 @@
+#override("title")
+主页
+#end
+#override("content")
+<style>
+
+    body {
+        background-color: #ffffff;
+
+    }
+</style>
+
+<link rel="stylesheet" href="#springUrl('/static/css/ydui.css?rev=@@hash')"/>
+<link rel="stylesheet" href="#springUrl('/static/css/select_style.css')"/>
+<link rel="stylesheet" href="#springUrl('/static/css/meijia.css')"/>
+<!--<div class="glass">-->
+<!--</div>-->
+
+
+<div class="weui-tab">
+
+    <div class="weui-tab__panel" style="height: 100%">
+
+
+        <!--主页的内容-->
+        <div id="tab1">
+            <!--搜索框-->
+            <div class="searchDiv">
+                <div class="weui-search-bar" id="searchBar" style="height: 5%">
+                    <form class="weui-search-bar__form">
+                        <div class="weui-search-bar__box">
+                            <i class="weui-icon-search"></i>
+                            <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索"
+                                   required/>
+                            <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                        </div>
+                        <label class="weui-search-bar__label" id="searchText">
+                            <i class="weui-icon-search"></i>
+                            <span>搜索</span>
+                        </label>
+                    </form>
+                    <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+                </div>
+            </div>
+
+            <div class="m-tab" data-ydui-tab><!-- 这里添加data-ydui-tab就可以啦 -->
+                <div class="flex_div">
+
+                    <div class="select_location " readonly id="J_Address" placeholder="请选择收货地址"><a href="javascript:;">位置</a><i
+                            class="city-img"></i></div>
+                    <ul class="tab-nav">
+                        <li class="tab-nav-item tab-active"><a href="javascript:">推荐</a></li>
+                        <li class="tab-nav-item"><a href="javascript:;">销量</a></li>
+                        <li class="tab-nav-item"><a href="javascript:;">距离</a></li>
+                        <li class="tab-nav-item">
+                            <a href="javascript:;">价格</a>
+                            <i class="price-img">
+                                <img src="#springUrl('/static/img/wechat/down.png')" data-seq="discount_price*asc"
+                                     class="t-price">
+                                <img src="#springUrl('/static/img/wechat/down.png')" data-seq="discount_price*desc"
+                                     class="o-price">
+                            </i></li>
+                    </ul>
+                </div>
+
+                <div class="tab-panel">
+                    <div class="tab-panel-item tab-active">
+                        <div class="xiaoliang">
+                            <article class="m-list list-theme1">
+                                <a href="#" class="list-item" style="border-radius: 20%">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <div style="box-sizing: border-box">
+                                            <h3 class="list-title" style="display:inline-block;">蔻丹</h3>
+                                            <div class="badge badge-radius badge-primary"
+                                                 style="box-sizing: border-box;outline: none;margin-left: 50px;">
+                                                上门
+                                            </div>
+                                            <div class="badge badge-radius badge-danger"
+                                                 style="box-sizing: border-box;outline: none;">
+                                                到店
+                                            </div>
+                                        </div>
+
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>68.8</span>
+                                                <span class="list-del-price">¥100</span>
+                                            </div>
+                                            <div>998人做过</div>
+                                            <div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item" style="border-radius: 20%">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <div style="box-sizing: border-box">
+                                            <h3 class="list-title" style="display:inline-block;">蔻丹</h3>
+                                            <div class="badge badge-radius badge-primary"
+                                                 style="box-sizing: border-box;outline: none;margin-left: 50px;">
+                                                上门
+                                            </div>
+                                            <div class="badge badge-radius badge-danger"
+                                                 style="box-sizing: border-box;outline: none;">
+                                                到店
+                                            </div>
+                                        </div>
+
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>68.8</span>
+                                                <span class="list-del-price">¥100</span>
+                                            </div>
+                                            <div>998人做过</div>
+                                            <div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item" style="border-radius: 20%">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <div style="box-sizing: border-box">
+                                            <h3 class="list-title" style="display:inline-block;">蔻丹</h3>
+                                            <div class="badge badge-radius badge-primary"
+                                                 style="box-sizing: border-box;outline: none;margin-left: 50px;">
+                                                上门
+                                            </div>
+                                            <div class="badge badge-radius badge-danger"
+                                                 style="box-sizing: border-box;outline: none;">
+                                                到店
+                                            </div>
+                                        </div>
+
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>68.8</span>
+                                                <span class="list-del-price">¥100</span>
+                                            </div>
+                                            <div>998人做过</div>
+                                            <div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </a><a href="#" class="list-item" style="border-radius: 20%">
+                                <div class="list-img">
+                                    <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_220x220.jpg">
+                                </div>
+                                <div class="list-mes">
+                                    <div style="box-sizing: border-box">
+                                        <h3 class="list-title" style="display:inline-block;">蔻丹</h3>
+                                        <div class="badge badge-radius badge-primary"
+                                             style="box-sizing: border-box;outline: none;margin-left: 50px;">
+                                            上门
+                                        </div>
+                                        <div class="badge badge-radius badge-danger"
+                                             style="box-sizing: border-box;outline: none;">
+                                            到店
+                                        </div>
+                                    </div>
+
+                                    <div class="list-mes-item">
+                                        <div>
+                                            <span class="list-price"><em>¥</em>68.8</span>
+                                            <span class="list-del-price">¥100</span>
+                                        </div>
+                                        <div>998人做过</div>
+                                        <div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                                <a href="#" class="list-item" style="border-radius: 20%">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <div style="box-sizing: border-box">
+                                            <h3 class="list-title" style="display:inline-block;">蔻丹</h3>
+                                            <div class="badge badge-radius badge-primary"
+                                                 style="box-sizing: border-box;outline: none;margin-left: 50px;">
+                                                上门
+                                            </div>
+                                            <div class="badge badge-radius badge-danger"
+                                                 style="box-sizing: border-box;outline: none;">
+                                                到店
+                                            </div>
+                                        </div>
+
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>68.8</span>
+                                                <span class="list-del-price">¥100</span>
+                                            </div>
+                                            <div>998人做过</div>
+                                            <div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item" style="border-radius: 20%">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <div style="box-sizing: border-box">
+                                            <h3 class="list-title" style="display:inline-block;">蔻丹</h3>
+                                            <div class="badge badge-radius badge-primary"
+                                                 style="box-sizing: border-box;outline: none;margin-left: 50px;">
+                                                上门
+                                            </div>
+                                            <div class="badge badge-radius badge-danger"
+                                                 style="box-sizing: border-box;outline: none;">
+                                                到店
+                                            </div>
+                                        </div>
+
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>68.8</span>
+                                                <span class="list-del-price">¥100</span>
+                                            </div>
+                                            <div>998人做过</div>
+                                            <div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </a>
+
+                            </article>
+                        </div>
+                    </div>
+                    <div class="tab-panel-item">
+                        <div class="xiaoliang">
+                            <article class="m-list list-theme1">
+                                <a href="#" class="list-item" style="border-radius: 20%">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">蔻丹</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>68.8</span>
+                                                <span class="list-del-price">¥100</span>
+                                            </div>
+                                            <div>right</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/21/10172020923917672923.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">光疗甲油胶</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>120</span>
+                                                <span class="list-del-price">¥200</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/23/15395220917905380014.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">玻璃甲法拉利</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/25/14244120933639105658.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">延长光疗甲</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                            <div>right</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/23/15395220917905380014.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">玻璃甲法拉利</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/25/14244120933639105658.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">延长光疗甲</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                            <div>right</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/23/15395220917905380014.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">玻璃甲法拉利</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/25/14244120933639105658.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">延长光疗甲</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                            <div>right</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/23/15395220917905380014.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">玻璃甲法拉利</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/25/14244120933639105658.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">延长光疗甲</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                            <div>right</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/23/15395220917905380014.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">玻璃甲法拉利</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/25/14244120933639105658.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">延长光疗甲</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                            <div>right</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="tab-panel-item">
+                        <div class="xiaoliang">
+                            <article class="m-list list-theme1">
+                                <a href="#" class="list-item" style="border-radius: 20%">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">蔻丹</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>68.8</span>
+                                                <span class="list-del-price">¥100</span>
+                                            </div>
+                                            <div>right</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/21/10172020923917672923.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">光疗甲油胶</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>120</span>
+                                                <span class="list-del-price">¥200</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/23/15395220917905380014.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">玻璃甲法拉利</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/25/14244120933639105658.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">延长光疗甲</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                            <div>right</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/23/15395220917905380014.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">玻璃甲法拉利</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/25/14244120933639105658.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">延长光疗甲</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                            <div>right</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/23/15395220917905380014.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">玻璃甲法拉利</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/25/14244120933639105658.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">延长光疗甲</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                            <div>right</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/23/15395220917905380014.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">玻璃甲法拉利</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/25/14244120933639105658.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">延长光疗甲</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                            <div>right</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/23/15395220917905380014.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">玻璃甲法拉利</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/25/14244120933639105658.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">延长光疗甲</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                            <div>right</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="tab-panel-item">
+                        <div class="xiaoliang">
+                            <article class="m-list list-theme1">
+                                <a href="#" class="list-item" style="border-radius: 20%">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">蔻丹</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>68.8</span>
+                                                <span class="list-del-price">¥100</span>
+                                            </div>
+                                            <div>right</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/21/10172020923917672923.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">光疗甲油胶</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>120</span>
+                                                <span class="list-del-price">¥200</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/23/15395220917905380014.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">玻璃甲法拉利</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/25/14244120933639105658.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">延长光疗甲</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                            <div>right</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/23/15395220917905380014.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">玻璃甲法拉利</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/25/14244120933639105658.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">延长光疗甲</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                            <div>right</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/23/15395220917905380014.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">玻璃甲法拉利</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/25/14244120933639105658.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">延长光疗甲</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                            <div>right</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/23/15395220917905380014.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">玻璃甲法拉利</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/25/14244120933639105658.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">延长光疗甲</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                            <div>right</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/23/15395220917905380014.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">玻璃甲法拉利</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/25/14244120933639105658.jpg_220x220.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title">延长光疗甲</h3>
+                                        <div class="list-mes-item">
+                                            <div>
+                                                <span class="list-price"><em>¥</em>380</span>
+                                                <span class="list-del-price">¥500</span>
+                                            </div>
+                                            <div>right</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--列表-->
+
+
+            <div id="dialogs">
+                <div class="js_dialog" id="iosDialog2" style="opacity: 1; display: none;">
+                    <div class="weui-mask">
+                    </div>
+                    <div class="weui-dialog">
+                        <div class="weui-dialog__bd">
+                            <img src="images/ewm2.png">
+                        </div>
+                        <div class="weui-dialog__ft">
+                            <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default">取消</a>
+                            <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">确认</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+#end
+#extends("/common/wechatframework.html")
+
+<script>
+    $(function () {
+        var address = $('#J_Address');
+
+        address.citySelect();
+
+        address.on('click', function () {
+            address.citySelect('open');
+        });
+        address.on('done.ydui.cityselect', function (ret) {
+            /* 省：ret.provance */
+            /* 市：ret.city */
+            /* 县：ret.area */
+            $(this).val(ret.provance + ' ' + ret.city + ' ' + ret.area);
+            address.text(ret.city)
+        });
+    })
+</script>
+
+
+<script type="text/javascript">
+
+    //弹出层
+//    $('.select_location').shareConfig({
+//        Shade: true, //是否显示遮罩层
+//        Event: 'click', //触发事件
+//        Content: 'Sharea', //内容DIV ID
+//        Title: ' ' //显示标题
+//    });
+
+    $("[type='inpit/assembly']").inpitassembly({
+        ischeck_: false,
+        selected_data: [{
+            name: "type",
+            data: ["仓鼠"]
+        }
+        ]
+    });
+
+</script>
+
+<script>
+    $(function () {
+
+
+        function getQueryVariable() {
+            var query = window.location.href;
+            var vars = query.split("/");
+            a = vars.pop();
+            return a;
+        }
+
+        $.ajax({
+            url: "#springUrl('/banner/selectBannerList')",
+            type: "post",
+            success: function (data) {
+                var obj = eval('(' + data + ')');
+                text = "";
+                for (var i = 0; i < obj.length; i++) {
+                    text = text + "<div class=\"swiper-slide\">\n" +
+                        "                        <img src=\"#springUrl('" + obj[i].src + "')\" alt=\"\">\n" +
+                        "                </div>"
+                }
+                $("#slider").prepend(text);
+                var mySwiper = new Swiper('.swiper-container', {
+                    spaceBetween: 30,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true
+                    }
+//                    slidesPerView: obj.length
+
+                });
+            }
+        });
+
+
+    })
+</script>

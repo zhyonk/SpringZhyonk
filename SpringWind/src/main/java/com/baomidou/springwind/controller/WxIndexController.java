@@ -77,6 +77,9 @@ public class WxIndexController extends SuperController {
         return "/index";
     }
 
+
+
+
     @Login(action = Action.Skip)
     @Permission(action = Action.Skip)
     @RequestMapping("/zhyonk")
@@ -129,5 +132,11 @@ public class WxIndexController extends SuperController {
         cookie.setMaxAge(2 * 60 * 60);
         response.addCookie(cookie);
         return "/wx/index";
+    }
+
+    @RequestMapping("/classify")
+    public String classify(Model model, HttpServletResponse response, @RequestParam(value = "classify", required = false) String classify) throws WxErrorException {
+
+        return "/wx/"+classify;
     }
 }

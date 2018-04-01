@@ -11,6 +11,7 @@
 </style>
 
 <link rel="stylesheet" href="#springUrl('/static/css/ydui.css?rev=@@hash')"/>
+<link rel="stylesheet" href="#springUrl('/static/css/select_style.css')"/>
 <!--<div class="glass">-->
 <!--</div>-->
 
@@ -49,12 +50,28 @@
                     <img src="#springUrl('/static/img/xia/x5.jpg')" style="max-width:100%;overflow:hidden;">
                     <img src="#springUrl('/static/img/xia/x6.jpg')" style="max-width:100%;overflow:hidden;">
                 </div>
-                <div class="tab-panel-item">222222</div>
+                <div class="tab-panel-item">
+                    <button  class="open-popup weui-btn weui-btn_primary share" data-target="#bottomb">测试弹出层</button>
+                </div>
                 <div class="tab-panel-item">333333</div>
             </div>
         </div>
 
-
+        <div id="dialogs">
+            <div class="js_dialog" id="iosDialog2" style="opacity: 1; display: none;">
+                <div class="weui-mask">
+                </div>
+                <div class="weui-dialog">
+                    <div class="weui-dialog__bd">
+                        <img src="images/ewm2.png">
+                    </div>
+                    <div class="weui-dialog__ft">
+                        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default">取消</a>
+                        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">确认</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -112,8 +129,29 @@
 #extends("/common/wechatframework.html")
 
 <script type="text/javascript">
+
+
+    //弹出层
+    $('.share').shareConfig({
+        Shade : true, //是否显示遮罩层
+        Event:'click', //触发事件
+        Content : 'Share', //内容DIV ID
+        Title : ' ' //显示标题
+    });
+
+    $("[type='inpit/assembly']").inpitassembly({
+        ischeck_: false,
+        selected_data: [{
+            name: "type",
+            data: ["仓鼠"]
+        }
+        ]
+    });
+
+
     // ios
     $(function () {
+
         var $iosActionsheet = $('#iosActionsheet');
         var $iosMask = $('#iosMask');
 
