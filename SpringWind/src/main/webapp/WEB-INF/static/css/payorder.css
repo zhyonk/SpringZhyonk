@@ -1,0 +1,74 @@
+.comm-info, .red-info, .pay-way {
+    background-color: #ffffff;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    color: #333;
+}
+.red-info ul, .comm-info ul {
+     margin: 0 10px;
+     font-size: 15px;
+ }
+
+.red-info ul li, .comm-info ul li {
+    border-bottom: 1px solid #d1d1d1;
+    min-height: 44px;
+    line-height: 44px;
+}
+.user-avatar {
+    float: left;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px 0;
+    background-color: #ccc;
+}
+.store-name {
+    min-height: 65px;
+    line-height: 65px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+.red-info ul li, .comm-info ul li {
+    border-bottom: 1px solid #d1d1d1;
+    min-height: 44px;
+    line-height: 44px;
+}
+.style-info {
+    position: relative;
+    background: url(http://st.quxiu8.com/st/image/shop/right_10_24.png) 98% no-repeat;
+    background-size: 6px 14px;
+}
+.style-info img {
+    width: 88px;
+    height: 75px;
+    margin: 10px 0;
+}
+.style-info .style-name {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    font-size: 15px;
+    color: #666666;
+}
+.style-info .style-price {
+    position: absolute;
+    top: 35px;
+    left: 100px;
+    font-size: 14px;
+}
+.style-info .style-price span {
+    color: #ff4768;
+}
+.red-info .allmoney {
+    color: #ff4770;
+}
+.red-info ul li, .comm-info ul li {
+    border-bottom: 1px solid #d1d1d1;
+    min-height: 44px;
+    line-height: 44px;
+}
+.sel-icon span {
+    color: #3c3c3c;
+    margin-right: 15px;
+}

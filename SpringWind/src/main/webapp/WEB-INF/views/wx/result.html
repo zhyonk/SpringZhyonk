@@ -1,0 +1,62 @@
+#override("title")
+主页
+#end
+#override("content")
+<style>
+
+    body {
+        background-color: #ffffff;
+
+    }
+</style>
+
+<link rel="stylesheet" href="#springUrl('/static/css/ydui.css?rev=@@hash')"/>
+<link rel="stylesheet" href="#springUrl('/static/css/select_style.css')"/>
+<link rel="stylesheet" href="#springUrl('/static/css/payorder.css')"/>
+<!--<div class="glass">-->
+<!--</div>-->
+<div class="weui-msg">
+    <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
+    <div class="weui-msg__text-area">
+        <h2 class="weui-msg__title">预约成功</h2>
+        <p class="weui-msg__desc">您已经预约。。。。
+            <!--<a href="javascript:void(0);">文字链接</a>-->
+        </p>
+    </div>
+    <div class="weui-msg__opr-area">
+        <p class="weui-btn-area">
+            <a href="javascript:history.back();" class="weui-btn weui-btn_primary">查看订单</a>
+            <a href="javascript:history.back();" class="weui-btn weui-btn_default">返回主页</a>
+        </p>
+    </div>
+    <div class="weui-msg__extra-area">
+        <div class="weui-footer">
+            <p class="weui-footer__links">
+                <a href="javascript:void(0);" class="weui-footer__link">初夏工作室</a>
+            </p>
+            <p class="weui-footer__text">Copyright &copy; 2008-2019 chuxiastadio</p>
+        </div>
+    </div>
+</div>
+
+
+#end
+#extends("/common/wechatframework.html")
+
+<script>
+    $('#J_Slider').slider({
+        speed: 200,
+        autoplay: 2000,
+        lazyLoad: true
+    });
+</script>
+
+<script>
+
+
+</script>
+<script type="text/javascript">
+
+
+
+</script>

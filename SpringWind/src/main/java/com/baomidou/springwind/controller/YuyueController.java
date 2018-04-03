@@ -134,6 +134,16 @@ public class YuyueController extends SuperController {
         return "wx/alreadyYY";
     }
 
+    //进入详情
+//    @Permission(action = Action.Skip)
+    @RequestMapping("/details")
+    public String details(Model model, HttpServletResponse response, @RequestParam(value = "kehuid", required = false) String kehuid, HttpServletRequest request) {
+        return "wx/details";
+    }
+
+
+
+
     @RequestMapping("/yuyue")
     public String yuyue(Model model, HttpServletResponse response, @RequestParam(value = "jishiid", required = false) String jishiid, HttpServletRequest request) {
 //        Cookie[] cookies = request.getCookies();
@@ -143,7 +153,32 @@ public class YuyueController extends SuperController {
 //
 //            }
 //        }
-        return "wx/yuyue";
+        return "wx/payorder";
+    }
+
+    @RequestMapping("/shopindex")
+    public String shopindex(Model model, HttpServletResponse response, @RequestParam(value = "jishiid", required = false) String jishiid, HttpServletRequest request) {
+//        Cookie[] cookies = request.getCookies();
+//        System.out.println(cookies.toString());
+//        for (Cookie cookie : cookies) {
+//            if (StringUtils.equals(cookie.getName(), "openid")) {
+//
+//            }
+//        }
+        return "wx/shopindex";
+    }
+
+
+    @RequestMapping("/payorder")
+    public String payorder(Model model, HttpServletResponse response, @RequestParam(value = "jishiid", required = false) String jishiid, HttpServletRequest request) {
+//        Cookie[] cookies = request.getCookies();
+//        System.out.println(cookies.toString());
+//        for (Cookie cookie : cookies) {
+//            if (StringUtils.equals(cookie.getName(), "openid")) {
+//
+//            }
+//        }
+        return "wx/result";
     }
 
     //取消预约

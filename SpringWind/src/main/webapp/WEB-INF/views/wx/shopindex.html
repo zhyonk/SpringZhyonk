@@ -1,0 +1,308 @@
+#override("title")
+主页
+#end
+#override("content")
+
+<link rel="stylesheet" href="#springUrl('/static/css/ydui.css?rev=@@hash')"/>
+<link rel="stylesheet" href="#springUrl('/static/css/shopindex.css')"/>
+
+<div class="main-content">
+    <header style="background: url(http://zhyonk.tunnel.echomod.cn/static/uploads/001.jpg) center center / 100% 100% no-repeat;">
+        <div id="shop" style="background: rgba(255, 255, 255, 0.8);"><p class="headpic">
+
+        </p><div class="rz-1">
+            <span class="rz-icon" style="">已认证</span>
+        </div>
+
+
+            <a id="shopImageList" class="rep">
+
+                <img src="#springUrl('/static/uploads/001.jpg')" onerror="GetDefaultHeadImg(this)">
+            </a>
+            <span class="main-shop-name">初夏美妆工作室
+
+        <i class="remark"><img src="#springUrl('/static/uploads/xing.png')"> 星店</i>
+
+    </span>
+            <p></p>
+            <p class="fllow-count">
+
+                <i class="star"></i>
+
+                <i class="star"></i>
+
+                <i class="star"></i>
+
+                <i class="star"></i>
+
+                <i class="star"></i>
+
+
+            </p>
+            <p class="shop-score">
+                <span>形象：<label>5</label></span>
+                <span>守时：<label>5</label></span>
+                <span>效果：<label>5</label></span>
+                <span>服务：<label>5</label></span>
+            </p>
+            <div class="btn-div">
+                <a onclick="$.SetTel(['13810080712', '01058205220']);" class="btn-tel">店铺电话</a>
+
+
+                <a href="javascript:void(0)" data-method="follow" class="btn-fllow fllow-btn">+&nbsp;&nbsp;关注</a>
+
+
+            </div>
+
+            <div class="address text-overflow-ellipsis-1" id="showmap">
+                <img src="#springUrl('/static/uploads/address.png')">
+
+                <p>地址：西安市莲湖区梨园路君悦华府</p>
+            </div></div>
+    </header>
+
+    <section id="redlist"></section>
+
+    <div id="J_Tab" class="m-tab">
+        <ul class="tab-nav">
+            <li class="tab-nav-item tab-active"><a href="javascript:;">预约</a></li>
+            <li class="tab-nav-item"><a href="javascript:;">美甲师</a></li>
+            <!--<li class="tab-nav-item"><a href="javascript:;">店铺秀</a></li>-->
+        </ul>
+        <!--预约-->
+        <div class="tab-panel">
+            <div class="tab-panel-item tab-active">
+                <div class="xiaoliang">
+                    <article class="m-list list-theme1">
+                        <a href="#springUrl('/yuyue/details')" class="list-item" style="border-radius: 20%">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_220x220.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <div style="box-sizing: border-box">
+                                    <h3 class="list-title" style="display:inline-block;">蔻丹</h3>
+                                    <div class="badge badge-radius badge-primary"
+                                         style="box-sizing: border-box;outline: none;margin-left: 50px;">
+                                        上门
+                                    </div>
+                                    <div class="badge badge-radius badge-danger"
+                                         style="box-sizing: border-box;outline: none;">
+                                        到店
+                                    </div>
+                                </div>
+
+                                <div class="list-mes-item">
+                                    <div>
+                                        <span class="list-price"><em>¥</em>68.8</span>
+                                        <span class="list-del-price">¥100</span>
+                                    </div>
+                                    <div>998人做过</div>
+                                    <div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                        <a href="#" class="list-item" style="border-radius: 20%">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_220x220.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <div style="box-sizing: border-box">
+                                    <h3 class="list-title" style="display:inline-block;">蔻丹</h3>
+                                    <div class="badge badge-radius badge-primary"
+                                         style="box-sizing: border-box;outline: none;margin-left: 50px;">
+                                        上门
+                                    </div>
+                                    <div class="badge badge-radius badge-danger"
+                                         style="box-sizing: border-box;outline: none;">
+                                        到店
+                                    </div>
+                                </div>
+
+                                <div class="list-mes-item">
+                                    <div>
+                                        <span class="list-price"><em>¥</em>68.8</span>
+                                        <span class="list-del-price">¥100</span>
+                                    </div>
+                                    <div>998人做过</div>
+                                    <div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                        <a href="#" class="list-item" style="border-radius: 20%">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_220x220.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <div style="box-sizing: border-box">
+                                    <h3 class="list-title" style="display:inline-block;">蔻丹</h3>
+                                    <div class="badge badge-radius badge-primary"
+                                         style="box-sizing: border-box;outline: none;margin-left: 50px;">
+                                        上门
+                                    </div>
+                                    <div class="badge badge-radius badge-danger"
+                                         style="box-sizing: border-box;outline: none;">
+                                        到店
+                                    </div>
+                                </div>
+
+                                <div class="list-mes-item">
+                                    <div>
+                                        <span class="list-price"><em>¥</em>68.8</span>
+                                        <span class="list-del-price">¥100</span>
+                                    </div>
+                                    <div>998人做过</div>
+                                    <div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a><a href="#" class="list-item" style="border-radius: 20%">
+                        <div class="list-img">
+                            <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_220x220.jpg">
+                        </div>
+                        <div class="list-mes">
+                            <div style="box-sizing: border-box">
+                                <h3 class="list-title" style="display:inline-block;">蔻丹</h3>
+                                <div class="badge badge-radius badge-primary"
+                                     style="box-sizing: border-box;outline: none;margin-left: 50px;">
+                                    上门
+                                </div>
+                                <div class="badge badge-radius badge-danger"
+                                     style="box-sizing: border-box;outline: none;">
+                                    到店
+                                </div>
+                            </div>
+
+                            <div class="list-mes-item">
+                                <div>
+                                    <span class="list-price"><em>¥</em>68.8</span>
+                                    <span class="list-del-price">¥100</span>
+                                </div>
+                                <div>998人做过</div>
+                                <div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+                        <a href="#" class="list-item" style="border-radius: 20%">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_220x220.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <div style="box-sizing: border-box">
+                                    <h3 class="list-title" style="display:inline-block;">蔻丹</h3>
+                                    <div class="badge badge-radius badge-primary"
+                                         style="box-sizing: border-box;outline: none;margin-left: 50px;">
+                                        上门
+                                    </div>
+                                    <div class="badge badge-radius badge-danger"
+                                         style="box-sizing: border-box;outline: none;">
+                                        到店
+                                    </div>
+                                </div>
+
+                                <div class="list-mes-item">
+                                    <div>
+                                        <span class="list-price"><em>¥</em>68.8</span>
+                                        <span class="list-del-price">¥100</span>
+                                    </div>
+                                    <div>998人做过</div>
+                                    <div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                        <a href="#" class="list-item" style="border-radius: 20%">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_220x220.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <div style="box-sizing: border-box">
+                                    <h3 class="list-title" style="display:inline-block;">蔻丹</h3>
+                                    <div class="badge badge-radius badge-primary"
+                                         style="box-sizing: border-box;outline: none;margin-left: 50px;">
+                                        上门
+                                    </div>
+                                    <div class="badge badge-radius badge-danger"
+                                         style="box-sizing: border-box;outline: none;">
+                                        到店
+                                    </div>
+                                </div>
+
+                                <div class="list-mes-item">
+                                    <div>
+                                        <span class="list-price"><em>¥</em>68.8</span>
+                                        <span class="list-del-price">¥100</span>
+                                    </div>
+                                    <div>998人做过</div>
+                                    <div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+
+                    </article>
+                </div>
+            </div>
+            <!--美甲师-->
+            <div class="tab-panel-item">222222</div>
+            <!--美甲秀-->
+            <!--<div class="tab-panel-item">-->
+
+            <!--</div>-->
+        </div>
+    </div>
+
+
+
+
+#end
+#extends("/common/wechatframework.html")
+
+
+    <script>
+        var tab = $('#J_Tab');
+
+        tab.tab({
+            nav: '.tab-nav-item',
+            panel: '.tab-panel-item',
+            activeClass: 'tab-active'
+        });
+
+        tab.find('.tab-nav-item').on('open.ydui.tab', function (e) {
+            console.log('索引：%s - [%s]正在打开', e.index, $(this).text());
+        });
+
+        tab.find('.tab-nav-item').on('opened.ydui.tab', function (e) {
+            console.log('索引：%s - [%s]已经打开了', e.index, $(this).text());
+        });
+    </script>
+
+
+<script type="text/javascript">
+
+    //弹出层
+    //    $('.select_location').shareConfig({
+    //        Shade: true, //是否显示遮罩层
+    //        Event: 'click', //触发事件
+    //        Content: 'Sharea', //内容DIV ID
+    //        Title: ' ' //显示标题
+    //    });
+
+    //    $("[type='inpit/assembly']").inpitassembly({
+    //        ischeck_: false,
+    //        selected_data: [{
+    //            name: "type",
+    //            data: ["仓鼠"]
+    //        }
+    //        ]
+    //    });
+
+</script>

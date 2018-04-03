@@ -55,7 +55,7 @@ public class WxIndexController extends SuperController {
         WxMenuButton button2 = new WxMenuButton();
         WxMenuButton button3 = new WxMenuButton();
         button1.setName("美甲预约");
-//        button2.setName("拼团美甲");
+        button2.setName("拼团美甲");
         button3.setName("生成二维码");
         button1.setType(WxConsts.MenuButtonType.VIEW);
         button2.setType(WxConsts.MenuButtonType.VIEW);
@@ -66,7 +66,7 @@ public class WxIndexController extends SuperController {
         button3.setKey("二维码正在生成");
         menulist.add(button1);
         menulist.add(button2);
-//        menulist.add(button3);
+        menulist.add(button3);
         menu.setButtons(menulist);
         try {
             String s = wxUserService.getMenuService().menuCreate(menu);

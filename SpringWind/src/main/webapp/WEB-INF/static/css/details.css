@@ -1,0 +1,249 @@
+.sell-price {
+    font-size: 18px;
+    color: #ff4770;
+    margin-left: 10px;
+}
+.market-price {
+    font-size: 13px;
+    color: #999;
+    margin-left: 5px;
+    text-decoration: line-through;
+}
+.shopinfo {
+    width: 100%;
+    margin: 18px 0 12px 0;
+}
+.shopinfo span {
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    border-right: 1px solid #ededed;
+}
+.shopinfo span:last-child {
+    border-right: none;
+}
+.price-info {
+    border-bottom: 1px solid #cdcdcd;
+    background-color: #ffffff;
+}
+.shop-tips {
+    padding: 12px 10px;
+    margin-bottom: 12px;
+    background-color: #fafafa;
+}
+.shop-tips span {
+    font-size: 12px;
+    color: #999;
+    background: url("http://zhyonk.tunnel.echomod.cn/static/uploads/icon_27_27.png") left center no-repeat;
+    background-size: auto auto;
+    background-size: 14px 14px;
+    line-height: 25px;
+    text-indent: 20px;
+    float: left;
+    width: 50%;
+    display: inline-block;
+}
+.description {
+    min-height: 50px;
+    margin-top: 10px;
+    background-color: #ffffff;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #dedede;
+}
+.dt-content {
+    margin: 0 10px;
+    padding-bottom: 10px;
+}
+.description .title {
+    color: #333;
+    font-size: 13px;
+    line-height: 30px;
+    border-bottom: 1px solid #dedede;
+}
+.description-info {
+    font-size: 13px;
+    color: #666;
+    margin-top: 15px;
+}
+.shop-info {
+    background: #ffffff;
+}
+.shop-info table {
+    margin: 0 10px 0 10px;
+}
+.shop-info table tr {
+    vertical-align: top;
+}
+.shop-info table tr .left {
+    width: 50px;
+    color: #666;
+    font-size: 13px;
+}
+.shop-info table tr td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.shop-info table span {
+    background: #ffeef2;
+    height: 22px;
+    line-height: 22px;
+    border: 1px solid #ffcbd7;
+    color: #ff4770;
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 8px 5px 0;
+    padding: 0 5px;
+}
+
+.shop-address {
+    min-height: 94px;
+    background: #ffffff;
+    margin-top: 10px;
+    padding-bottom: 100px;
+    border-top: 1px solid #dedede;
+}
+.shop-address .main-left {
+    line-height: 20px;
+    margin-top: 12px;
+    padding-top: 10px;
+    /* border-right: 1px solid #ededed; */
+    /* margin-right: 60px; */
+    /* width: 85%; */
+    background: url(http://zhyonk.tunnel.echomod.cn/static/uploads/right_10_24.png) 98% no-repeat;
+    /* background-size: auto auto; */
+    background-size: 6px 14px;
+}
+.userinfo {
+    min-height: 45px;
+    border-radius: 5px;
+    color: #787878;
+    margin: 6px 0 0 0;
+}
+.reps {
+    width: 34px;
+    height: 34px;
+    float: left;
+    cursor: pointer;
+    border-radius: 17px;
+}
+.main-info {
+    margin: 0 6px 0 50px;
+}
+.title-group {
+    overflow: hidden;
+    float: left;
+    max-width: 75%;
+}
+.main-info .rz-icon {
+    background-color: #2da2fb;
+    color: #ffffff;
+    font-size: 10px;
+    padding: 3px 5px;
+    border-radius: 3px;
+    margin-left: 5px;
+    /* float: left; */
+}
+.fllow-count {
+    color: #999999;
+    padding-top: 5px;
+    margin-left: -3px;
+}
+.star-b {
+    background: url('http://zhyonk.tunnel.echomod.cn/static/uploads/wjx-b.png') center center no-repeat;
+    background-size: auto auto;
+    width: 15px;
+    height: 15px;
+    background-size: 15px 15px;
+    display: inline-block;
+    margin-left: 3px;
+}
+.shop-score {
+    color: #666;
+    font-size: 13px;
+    padding-top: 10px;
+    border-bottom: 1px solid #dedede;
+    border-top: 1px solid #dedede;
+    height: 40px;
+    margin-top: 10px;
+}
+.shop-score span {
+    width: 23%;
+    border-right: 1px solid #dedede;
+    text-align: center;
+    display: inline-block;
+}
+.shop-score span label {
+    color: #ff4470;
+}
+.reps img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+.main-info .name {
+    color: #333333;
+    font-size: 14px;
+}
+.shop-address .main-right {
+    /*background: #ffffff url("http://hqnwjq.natappfree.cc/static/uploads/tel_42_46.png") 25px center no-repeat;*/
+    background: #ffffff url("http://zhyonk.tunnel.echomod.cn/static/uploads/phone_img.png") 15px center no-repeat;
+    background-size: auto auto;
+    background-size: 32px 32px;
+    width: 60px;
+    min-height: 50px;
+    float: right;
+    cursor: pointer;
+    border-left: 1px solid #dedede;
+}
+.shop_address {
+    border-top: 1px solid #dedede;
+    margin-top: -1px;
+}
+.star {
+    background: url('http://zhyonk.tunnel.echomod.cn/static/uploads/wjx-a.png') center center no-repeat;
+    background-size: auto auto;
+    width: 15px;
+    height: 15px;
+    background-size: 15px 15px;
+    display: inline-block;
+    margin-left: 3px;
+}
+.address {
+    height: 40px;
+    line-height: 40px;
+    border-right: 1px solid #dedede;
+    margin: -32px 15px 0 22px;
+}
+.shop_address {
+    border-top: 1px solid #dedede;
+    margin-top: -1px;
+}
+.shop_address img {
+    width: 16px;
+    height: 23px;
+    margin-top: 15px;
+}
+.address {
+    height: 40px;
+    line-height: 40px;
+    border-right: 1px solid #dedede;
+    margin: -32px 15px 0 22px;
+}
+.buy-btn {
+    display: inline-block;
+    width: 201px;
+    height: 35px;
+    background-color: #ff4770;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 31px;
+    border-radius: 3px;
+    float: right;
+    margin: 10px 10px 10px 0;
+    margin-left: auto;
+    margin-right: auto;
+}

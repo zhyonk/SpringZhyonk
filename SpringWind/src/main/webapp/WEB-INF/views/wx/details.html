@@ -1,0 +1,193 @@
+#override("title")
+主页
+#end
+#override("content")
+<style>
+
+    body {
+        background-color: #ffffff;
+
+    }
+</style>
+
+<link rel="stylesheet" href="#springUrl('/static/css/ydui.css?rev=@@hash')"/>
+<link rel="stylesheet" href="#springUrl('/static/css/select_style.css')"/>
+<link rel="stylesheet" href="#springUrl('/static/css/details.css')"/>
+<!--<div class="glass">-->
+<!--</div>-->
+
+
+<div class="m-slider" id="J_Slider">
+    <div class="slider-wrapper">
+        <div class="slider-item">
+            <a href="#">
+                <img src="http://static.ydcss.com/uploads/ydui/1.jpg">
+            </a>
+        </div>
+        <div class="slider-item">
+            <a href="#">
+                <img src="http://static.ydcss.com/uploads/ydui/2.jpg">
+            </a>
+        </div>
+        <div class="slider-item">
+            <a href="#">
+                <img src="http://static.ydcss.com/uploads/ydui/3.jpg">
+            </a>
+        </div>
+    </div>
+    <div class="slider-pagination"></div><!-- 分页标识 -->
+</div>
+
+<div class="price-info">
+    <div style="padding-top: 10px">
+        <span class="sell-price">￥0.01</span>
+        <span class="market-price">￥0</span>
+        <span class="badge badge-radius badge-primary">到店</span>
+        <span class="badge badge-radius badge-danger">上门</span>
+    </div>
+    <div class="shopinfo">
+        <span>耗时: 0分钟</span>
+        <span>保持: 0天</span>
+        <span>已预约: 0人</span>
+    </div>
+</div>
+<div class="shop-tips">
+
+    <span>免费wifi</span>
+
+    <span>做甲按摩</span>
+
+    <span>上门美甲美睫</span>
+
+    <span>25元起价</span>
+
+    <div style="clear: both; height: 5px"></div>
+</div>
+
+<div class="description">
+    <div class="dt-content">
+        <p class="title">款式描述</p>
+
+        <div class="description-info">
+            这两位老师做的都不错呢
+        </div>
+    </div>
+
+</div>
+
+
+<div class="shop-info">
+    <table>
+        <tbody><tr>
+            <td class="left">标签：</td>
+            <td>
+                <span>白色</span>
+            </td>
+        </tr>
+        </tbody></table>
+</div>
+
+<div class="shop-address">
+    <div class="dt-content">
+        <!--<p class="title">商家信息</p>-->
+
+        <div style="" class="main-left">
+            <div class="userinfo" href="">
+                <div class="reps">
+                    <img src="#springUrl('/static/uploads/001.jpg')" onerror="GetDefaultHeadImg(this)">
+                </div>
+                <div class="main-info">
+                    <p class="title-group">
+                        <span class="name text-overflow-ellipsis-1">初夏美甲化妆</span>
+                    </p>
+
+                    <span class="rz-icon" style="">已认证</span>
+
+                    <p class="fllow-count">
+
+                        <i class="star"></i>
+
+                        <i class="star"></i>
+
+                        <i class="star"></i>
+
+                        <i class="star"></i>
+
+                        <i class="star-b"></i>
+
+
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+        <p class="shop-score">
+            <span>形象&nbsp;<label>0</label></span>
+            <span>守时&nbsp;<label>0</label></span>
+            <span>效果&nbsp;<label>0</label></span>
+            <span>服务&nbsp;<label>0</label></span>
+        </p>
+        <!--虚拟店铺不显示电话？-->
+
+        <a id="telbtn" onclick="$.SetTel(['18103630928', '18103630928']);" class="main-right"></a>
+
+        <div class="shop_address">
+            <img src="#springUrl('/static/uploads/address.png')">
+
+            <p class="address text-overflow-ellipsis-1">
+                莲湖区-梨园路-君悦华府-e3-3h
+            </p>
+        </div>
+
+
+        <div class="shop_address" style="margin-top: 5px;">
+            <img src="#springUrl('/static/uploads/sq.png')">
+
+            <p class="address noborder">
+                服务商圈：
+
+
+                全城
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<footer class="m-tabbar tabbar-fixed " >
+        <a class="buy-btn" href="#springUrl('/yuyue/yuyue')">立即预约</a>
+</footer>
+
+#end
+#extends("/common/wechatframework.html")
+
+<script>
+    $('.main-left').click(function () {
+        window.location.href="#springUrl('/yuyue/shopindex')";
+    });
+
+
+</script>
+
+
+<script type="text/javascript">
+
+    //弹出层
+//    $('.select_location').shareConfig({
+//        Shade: true, //是否显示遮罩层
+//        Event: 'click', //触发事件
+//        Content: 'Sharea', //内容DIV ID
+//        Title: ' ' //显示标题
+//    });
+
+//    $("[type='inpit/assembly']").inpitassembly({
+//        ischeck_: false,
+//        selected_data: [{
+//            name: "type",
+//            data: ["仓鼠"]
+//        }
+//        ]
+//    });
+
+</script>

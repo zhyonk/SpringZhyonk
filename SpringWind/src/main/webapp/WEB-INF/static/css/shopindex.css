@@ -1,0 +1,281 @@
+.main-content {
+    -webkit-box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    position: relative;
+}
+header {
+    height: 248px;
+    background: url(http://st.quxiu8.com/st/image/loading2.gif) center center no-repeat;
+    text-align: center;
+}
+.headpic {
+    padding-top: 20px;
+}
+.rz-1 {
+    position: relative;
+    margin: 0 auto;
+    width: 100px;
+    background-color: #ff0000;
+}
+.rz-icon {
+    position: absolute;
+    right: 0;
+    background-color: #55c8c1;
+    color: #ffffff;
+    font-size: 10px;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+.rep {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: #ffffff;
+    border-radius: 25px;
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
+}
+.rep img {
+    width: 46px;
+    height: 46px;
+    border-radius: 23px;
+    margin: 2px;
+}
+.main-shop-name {
+    color: #3c3c3c;
+    font-size: 17px;
+    margin-top: 7px;
+    display: block;
+}
+.main-shop-name .remark {
+    font-size: 12px;
+    color: #f9446c;
+    position: absolute;
+    width: 45px;
+    margin: 4px 0 0 6px;
+}
+.main-shop-name .remark img {
+    float: left;
+    width: 17px;
+}
+.fllow-count {
+    color: #999999;
+    padding-top: 5px;
+}
+.star {
+    background: url(http://st.quxiu8.com/st/image/shop/wjx-a.png) center center no-repeat;
+    width: 15px;
+    height: 15px;
+    background-size: 15px 15px;
+    display: inline-block;
+    margin-left: 3px;
+}
+.shop-score {
+    color: #999999;
+    font-size: 13px;
+    padding-top: 10px;
+}
+.shop-score span {
+    margin-left: 10px;
+    display: inline-block;
+}
+.shop-score span label {
+    color: #ff4470;
+}
+.btn-div {
+    margin-top: 15px;
+}
+.btn-tel {
+    border-radius: 3px;
+    border: 1px solid #ff4770;
+    color: #ff4770;
+    font-size: 13px;
+    width: 128px;
+    height: 29px;
+    line-height: 29px;
+    display: inline-block;
+    background: url(http://st.quxiu8.com/st/image/shop/tel_30_30.png) 25px center no-repeat;
+    background-size: 15px 15px;
+    text-indent: 20px;
+    margin-right: 10px;
+}
+.btn-fllow {
+    border-radius: 3px;
+    background-color: #ff4770;
+    border: 1px solid #ff4770;
+    color: #ffffff;
+    font-size: 13px;
+    width: 128px;
+    height: 29px;
+    line-height: 29px;
+    display: inline-block;
+}
+.address {
+    margin: 10px 0;
+    height: 40px;
+    text-align: left;
+    line-height: 40px;
+    font-size: 13px;
+    color: #666666;
+    background: url(http://st.quxiu8.com/st/image/shop/right_10_24.png) 98% no-repeat;
+    background-size: 5px 12px;
+    background-color: #fff;
+}
+.address img {
+    width: 16px;
+    height: 23px;
+    margin: 8px 0 0 10px;
+}
+.shopnav {
+    margin-top: 10px;
+    height: 45px;
+    background-color: #ffffff;
+    line-height: 45px;
+    text-align: center;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+shopnav .current {
+    color: #ff4770;
+    font-size: 15px;
+}
+.shopnav a {
+    width: 25%;
+    display: block;
+    float: left;
+    border-top: 1px solid #d9d9d7;
+    color: #666666;
+    font-size: 13px;
+}
+
+shopnav .current span {
+    border-bottom: 2px solid #ff4770;
+}
+
+.shopnav .current {
+    color: #ff4770;
+    font-size: 15px;
+}
+.shopnav a {
+    width: 25%;
+    display: block;
+    float: left;
+    border-top: 1px solid #d9d9d7;
+    color: #666666;
+    font-size: 13px;
+}
+
+.address p {
+    margin: -31px 15px 0 32px;
+}
+.text-overflow-ellipsis-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.wf-main {
+    margin: 0 10px;
+    padding-top: 10px;
+    position: relative;
+}
+
+.wf-cld {
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.pentagon {
+    position: relative;
+    width: 35px;
+    height: 15px;
+    background-color: #ffc424;
+    margin-left: 10px;
+}
+.pentagon span {
+    position: absolute;
+    color: #fff;
+    margin: 0 0 0 6px;
+}
+.pentagon_s {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 17px solid transparent;
+    border-top: 10px solid #ffc424;
+    margin: 0 0 -25px 10px;
+}
+.wf-cld .showpic {
+    /* background: #999; */
+    overflow: hidden;
+}
+.wf-cld .showpic img {
+    width: 50%;
+    height: auto;
+}
+.wf-cld .showtxt {
+    line-height: 25px;
+    margin: 0 6px;
+    color: #acacac;
+    font-size: 11px;
+    padding-bottom: 20px;
+}
+.wf-cld .showtxt .content {
+    font-size: 13px;
+    color: #666666;
+}
+.wf-cld .showtxt .love {
+    background: url(http://st.quxiu8.com/st/image/detail/love_16_16.png) left 4px no-repeat;
+    padding-left: 18px;
+    background-size: 16px 16px;
+    float: left;
+}
+.wf-cld .showtxt .date {
+    float: right;
+}
+.wf-cld .userinfo {
+    margin: 6px;
+    margin-bottom: 0;
+    border-top: 1px dashed #e5e5e5;
+    padding-top: 5px;
+}
+.wf-cld .userinfo .rep {
+    width: 34px;
+    height: 34px;
+    float: left;
+    cursor: pointer;
+    border-radius: 17px;
+}
+.wf-cld .userinfo .rep img {
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+}
+.wf-cld .userinfo .rep img {
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+}
+.main-info {
+    margin: 0 6px 0 40px;
+}
+.title-group {
+    overflow: hidden;
+}
+.title-group {
+    overflow: hidden;
+}
+.main-info .name {
+    color: #333333;
+    font-size: 14px;
+}
