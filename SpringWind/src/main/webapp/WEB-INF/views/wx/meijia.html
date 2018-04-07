@@ -66,7 +66,7 @@
                 </div>
 
                 <div class="tab-panel">
-                    <div class="tab-panel-item tab-active">
+                    <div class="tab-panel-item tab-active" >
                         <div class="xiaoliang">
                             <article class="m-list list-theme1">
                                 <a href="#springUrl('/yuyue/details')" class="list-item" style="border-radius: 20%">
@@ -815,6 +815,7 @@
 #extends("/common/wechatframework.html")
 
 <script>
+    <!--城市选择-->
     $(function () {
         var address = $('#J_Address');
 
@@ -833,6 +834,75 @@
     })
 </script>
 
+<script>
+    $(function () {
+
+        $.ajax({
+            url: "#springUrl('/wx/selectUserInfo/')",
+            type: "post",
+            success: function (data) {
+                var obj = eval('(' + data + ')');
+                $(".my-avatar").attr('src', obj.headImgUrl);
+                $(".name").html(obj.nickname);
+            }
+        });
+
+        $(".xiaoliang").on("click",function(){
+           var xlBlock = $(".xiaoliang");
+            xlBlock.empty();
+            var obj = eval('(' + data + ')');
+//            xlHref = obj[i].
+            $.ajax({
+                url: "#springUrl('/goods/selectGoodsListByXiaoliang')",
+                type: "post",
+                success: function (data) {
+
+                    html = "";
+                    for (var i = 0; i < obj.length; i++) {
+                        var obj = eval('(' + data + ')');
+
+                        html+="<a href=\"#springUrl('"+obj[i].gUrl+"')\" class=\"list-item\" style=\"border-radius: 20%\">\n" +
+                            "         <div class=\"list-img\">\n" +
+                            "                              <img src=\"http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_220x220.jpg\">\n" +
+                            "                                    </div>\n" +
+                            "                                    <div class=\"list-mes\">\n" +
+                            "                                        <div style=\"box-sizing: border-box\">\n" +
+                            "                                            <h3 class=\"list-title\" style=\"display:inline-block;\">"+obj[i].gName+"</h3>\n" +
+                            "                                            <div class=\"badge badge-radius badge-primary\"\n" +
+                            "                                                 style=\"box-sizing: border-box;outline: none;margin-left: 50px;\">\n" +
+                            "                                                上门\n" +
+                            "                                            </div>\n" +
+                            "                                            <div class=\"badge badge-radius badge-danger\"\n" +
+                            "                                                 style=\"box-sizing: border-box;outline: none;\">\n" +
+                            "                                                到店\n" +
+                            "                                            </div>\n" +
+                            "                                        </div>\n" +
+                            "\n" +
+                            "                                        <div class=\"list-mes-item\">\n" +
+                            "                                            <div>\n" +
+                            "                                                <span class=\"list-price\"><em>¥</em>68.8</span>\n" +
+                            "                                                <span class=\"list-del-price\">¥100</span>\n" +
+                            "                                            </div>\n" +
+                            "                                            <div>998人做过</div>\n" +
+                            "                                            <div>\n" +
+                            "                                            </div>\n" +
+                            "                                        </div>\n" +
+                            "\n" +
+                            "                                    </div>\n" +
+                            "                                </a>"
+
+
+                    }
+
+
+                }
+            });
+        });
+
+    })
+
+
+</script>
 
 <script type="text/javascript">
 

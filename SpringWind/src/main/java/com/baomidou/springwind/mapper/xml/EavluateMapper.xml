@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baomidou.springwind.mapper.EavluateMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.baomidou.springwind.entity.Eavluate">
+		<id column="id" property="id" />
+		<result column="coustomer_id" property="coustomerId" />
+		<result column="type" property="type" />
+		<result column="countent" property="countent" />
+		<result column="crTime" property="crTime" />
+		<result column="is_anonymous" property="isAnonymous" />
+	</resultMap>
+
+</mapper>

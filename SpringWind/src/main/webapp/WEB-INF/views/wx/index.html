@@ -58,57 +58,7 @@
 
             <!--服务类型选择-->
 
-            <div class="weui-grids" style="background-color: #ffffff">
-                <a href="#springUrl('/wx/classify/?classify=meijia')" class="weui-grid">
-                    <div class="weui-grid__icon">
-                        <img src="#springUrl('/static/img/wechat/zhijiayou.png')" alt="">
-                    </div>
-                    <p class="weui-grid__label">
-                        美甲
-                    </p>
-                </a>
-
-                <a href="javascript:;" class="weui-grid">
-                    <div class="weui-grid__icon">
-                        <img src="#springUrl('/static/img/wechat/shouhu.png')" alt="">
-                    </div>
-                    <p class="weui-grid__label">
-                        手护
-                    </p>
-                </a>
-
-                <a href="javascript:;" class="weui-grid">
-                    <div class="weui-grid__icon">
-                        <img src="#springUrl('/static/img/wechat/meijie.png')" alt="">
-                    </div>
-                    <p class="weui-grid__label">
-                        美睫
-                    </p>
-                </a>
-                <a href="javascript:;" class="weui-grid">
-                    <div class="weui-grid__icon">
-                        <img src="#springUrl('/static/img/wechat/huazhuang.png')" alt="">
-                    </div>
-                    <p class="weui-grid__label">
-                        化妆
-                    </p>
-                </a>
-                <a href="javascript:;" class="weui-grid">
-                    <div class="weui-grid__icon">
-                        <img src="#springUrl('/static/img/wechat/banyongjiu.png')" alt="">
-                    </div>
-                    <p class="weui-grid__label">
-                        半永久
-                    </p>
-                </a>
-                <a href="javascript:;" class="weui-grid">
-                    <div class="weui-grid__icon">
-                        <img src="#springUrl('/static/img/wechat/xinniang2.png')" alt="">
-                    </div>
-                    <p class="weui-grid__label">
-                        新娘跟妆
-                    </p>
-                </a>
+            <div class="weui-grids" style="background-color: #ffffff" id="grids">
 
             </div>
 
@@ -121,12 +71,12 @@
                 </div>
 
 
-                <div class="weui-panel__ft">
-                    <a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link">
-                        <div class="weui-cell__bd">加入我们</div>
-                        <span class="weui-cell__ft"></span>
-                    </a>
-                </div>
+                <!--<div class="weui-panel__ft">-->
+                    <!--<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link">-->
+                        <!--<div class="weui-cell__bd">加入我们</div>-->
+                        <!--<span class="weui-cell__ft"></span>-->
+                    <!--</a>-->
+                <!--</div>-->
             </div>
 
             <!--seper 设计师切换-->
@@ -393,7 +343,9 @@
                     <span style="display: inline-block;position: relative;">
                         <img src="#springUrl('/static/img/wechat/yuyue.png')" alt=""
                              class="weui-tabbar__icon">
-                        <span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>
+                        <!--<span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">-->
+                            <!---->
+                        <!--</span>-->
                     </span>
                 <p class="weui-tabbar__label">预约美甲</p>
             </a>
@@ -404,7 +356,9 @@
             <a href="javascript:;" class="weui-tabbar__item" data="#tab3">
             <span style="display: inline-block;position: relative;">
             <img src="#springUrl('/static/img/wechat/wo.png')" alt="" class="weui-tabbar__icon">
-                <span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>
+                <span class="weui-badge" style="position: absolute;top: -2px;right: -13px;" >
+                    1
+                </span>
                     </span>
                 <p class="weui-tabbar__label">个人中心</p>
             </a>
@@ -429,6 +383,29 @@
                     $(".name").html(obj.nickname);
                 }
             });
+            //填充类别
+            $.ajax({
+                url: "#springUrl('/wx/selectAllClassify')",
+                type: "post",
+                success: function (data) {
+                    htmlText =  "";
+                    var obj = eval('(' + data + ')');
+                    for (var i = 0; i < obj.length; i++){
+                        imgSrc = obj[i].cImg;
+                        iconText = obj[i].cName;
+                        c_url = obj[i].cUrl;
+                        htmlText += "<a href=\"#springUrl('"+c_url+"')\" class=\"weui-grid\">\n" +
+                            "                    <div class=\"weui-grid__icon\">\n" +
+                            "                        <img src=\"#springUrl('"+imgSrc+"')\" alt=\"\">\n" +
+                            "                    </div>\n" +
+                            "                    <p class=\"weui-grid__label\">\n" +
+                            "                         "+iconText+
+                            "                    </p>\n" +
+                            "                </a>"
+                    }
+                    $(".weui-grids").prepend(htmlText)
+                }
+            });
 
             $.ajax({
                 url: "#springUrl('/banner/selectBannerList')",
@@ -441,7 +418,7 @@
                             "                        <img src=\"#springUrl('" + obj[i].src + "')\" alt=\"\">\n" +
                             "                </div>"
                     }
-                    $("#slider").prepend(text)
+                    $("#slider").prepend(text);
                     var mySwiper = new Swiper('.banner', {
                         spaceBetween: 30,
                         pagination: {
@@ -449,8 +426,7 @@
                             clickable: true
                         },
 //                    slidesPerView: obj.length
-
-                    });
+                    })
                 }
             });
 

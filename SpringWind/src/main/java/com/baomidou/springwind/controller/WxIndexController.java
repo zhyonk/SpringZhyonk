@@ -5,8 +5,12 @@ import com.baomidou.framework.controller.SuperController;
 import com.baomidou.kisso.annotation.Action;
 import com.baomidou.kisso.annotation.Login;
 import com.baomidou.kisso.annotation.Permission;
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.baomidou.springwind.builder.TextBuilder;
+import com.baomidou.springwind.entity.Classify;
 import com.baomidou.springwind.entity.WechatUser;
+import com.baomidou.springwind.service.impl.ClassifyServiceImpl;
 import com.baomidou.springwind.service.impl.LocalUserServiceImpl;
 import com.baomidou.springwind.service.impl.WeixinService;
 import me.chanjar.weixin.common.api.WxConsts;
@@ -45,6 +49,9 @@ public class WxIndexController extends SuperController {
     @Autowired
     private LocalUserServiceImpl localUserService;
 
+    @Autowired
+    private ClassifyServiceImpl classifyServiceImpl;
+
     @RequestMapping("/chargeMenu")
     @Permission(action = Action.Skip)
     @Login(action = Action.Skip)
@@ -77,7 +84,14 @@ public class WxIndexController extends SuperController {
         return "/index";
     }
 
-
+    @ResponseBody
+    @RequestMapping("/selectAllClassify")
+    public String selectAllClassify(HttpServletResponse response, HttpServletRequest request) {
+        EntityWrapper<Classify> classifyEntityWrapper = new EntityWrapper<>();
+        classifyEntityWrapper.where("c_status=0").orderBy("c_sort");
+        List<Classify> classifies = classifyServiceImpl.selectList(classifyEntityWrapper);
+        return toJson(classifies);
+    }
 
 
     @Login(action = Action.Skip)

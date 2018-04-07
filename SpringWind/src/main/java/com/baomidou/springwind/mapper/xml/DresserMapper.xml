@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baomidou.springwind.mapper.DresserMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.baomidou.springwind.entity.Dresser">
+		<id column="id" property="id" />
+		<result column="p_name" property="pName" />
+		<result column="p_sex" property="pSex" />
+		<result column="p_head_image" property="pHeadImage" />
+		<result column="p_describe" property="pDescribe" />
+		<result column="p_certification" property="pCertification" />
+		<result column="p_status" property="pStatus" />
+		<result column="p_appraise_info_id" property="pAppraiseInfoId" />
+		<result column="p_belongto_shop" property="pBelongtoShop" />
+		<result column="p_name_type" property="pNameType" />
+		<result column="p_work_year" property="pWorkYear" />
+		<result column="p_be_good_at_info" property="pBeGoodAtInfo" />
+	</resultMap>
+
+</mapper>
