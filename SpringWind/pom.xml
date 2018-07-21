@@ -192,6 +192,7 @@ http://www.w3.org/2001/XMLSchema-instance ">
 
 	<build>
 		<finalName>SpringWind</finalName>
+		<defaultGoal>compile</defaultGoal>
 		<resources>
 			<resource>
 				<directory>src/main/java</directory>
@@ -246,4 +247,5 @@ http://www.w3.org/2001/XMLSchema-instance ">
 		</plugins>
 
 	</build>
+
 </project>
