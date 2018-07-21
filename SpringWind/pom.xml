@@ -191,8 +191,8 @@ http://www.w3.org/2001/XMLSchema-instance ">
 	</profiles>
 
 	<build>
-		<finalName>SpringWind</finalName>
 		<defaultGoal>compile</defaultGoal>
+		<finalName>SpringWind</finalName>
 		<resources>
 			<resource>
 				<directory>src/main/java</directory>
