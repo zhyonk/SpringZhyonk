@@ -191,7 +191,7 @@ http://www.w3.org/2001/XMLSchema-instance ">
 	</profiles>
 
 	<build>
-		<defaultGoal>deploy</defaultGoal>
+		<defaultGoal>install</defaultGoal>
 		<finalName>SpringWind</finalName>
 		<resources>
 			<resource>
